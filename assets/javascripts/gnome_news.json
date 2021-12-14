@@ -1,9 +1,5 @@
 [
   [
-    "2021-10-31",
-    "New documentations: <a href='/cally9/'>Cally 9</a> (Mutter version), <a href='/clutter9/'>Clutter 9</a> (Mutter version), <a href='/clutterx119/'>ClutterX11 9</a> (Mutter version), <a href='/cogl9/'>Cogl 9</a> (Mutter version), <a href='/coglpango9/'>CoglPango 9</a> (Mutter version), <a href='/meta9/'>Mutter 9</a>"
-  ],
-  [
     "2021-09-05",
     "New documentations: <a href='/gtksource40/'>GtkSourceView 4</a>"
   ],

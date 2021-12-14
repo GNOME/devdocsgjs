@@ -1,5 +1,5 @@
 # We bump this each release to fetch the latest stable GIRs
-FROM fedora:35 AS fetch
+FROM fedora:34 AS fetch
 
 RUN dnf install -y \
         NetworkManager-libnm-devel cairo-devel cheese-libs-devel \
@@ -16,8 +16,7 @@ RUN dnf install -y \
         libgxps-devel libhandy1-devel libnotify-devel libpeas-devel \
         librsvg2-devel libsecret-devel libzapojit-devel mutter pango-devel \
         polkit-devel poppler-glib-devel rest-devel telepathy-glib-devel \
-        tracker-devel udisks-devel upower-devel vte{,291}-devel \
-        wireplumber-devel && \
+        tracker-devel udisks-devel upower-devel vte{,291}-devel && \
     dnf clean all && \
     rm -rf /var/cache/yum
 
@@ -28,20 +27,20 @@ FROM fedora:33 AS build
 # These are GIRs from the fetch step
 COPY --from=fetch /usr/share/gir-1.0 /usr/share/gir-1.0
 COPY --from=fetch /usr/share/gnome-shell /usr/share/gnome-shell
-COPY --from=fetch /usr/lib64/mutter-9 /usr/lib64/mutter-9
+COPY --from=fetch /usr/lib64/mutter-8 /usr/lib64/mutter-8
 
 # These are extra GIRs we can't install with dnf
 COPY lib/docs/scrapers/gnome/girs/GtkosxApplication-1.0.gir /usr/share/gir-1.0/
 COPY lib/docs/scrapers/gnome/girs/Tracker-2.0.gir /usr/share/gir-1.0/
 COPY lib/docs/scrapers/gnome/girs/TrackerControl-2.0.gir /usr/share/gir-1.0/
 COPY lib/docs/scrapers/gnome/girs/TrackerMiner-2.0.gir /usr/share/gir-1.0/
+COPY lib/docs/scrapers/gnome/girs/Wp-0.3.gir /usr/share/gir-1.0/
 
 COPY lib/docs/scrapers/gnome/girs/mutter-3 /usr/lib64/mutter-3
 COPY lib/docs/scrapers/gnome/girs/mutter-4 /usr/lib64/mutter-4
 COPY lib/docs/scrapers/gnome/girs/mutter-5 /usr/lib64/mutter-5
 COPY lib/docs/scrapers/gnome/girs/mutter-6 /usr/lib64/mutter-6
 COPY lib/docs/scrapers/gnome/girs/mutter-7 /usr/lib64/mutter-7
-COPY lib/docs/scrapers/gnome/girs/mutter-8 /usr/lib64/mutter-8
 
 # Install devdocs dependencies
 RUN dnf install -y glibc-langpack-en
@@ -71,7 +70,6 @@ RUN bundle exec thor gir:generate_all /usr/lib64/mutter-5
 RUN bundle exec thor gir:generate_all /usr/lib64/mutter-6
 RUN bundle exec thor gir:generate_all /usr/lib64/mutter-7
 RUN bundle exec thor gir:generate_all /usr/lib64/mutter-8
-RUN bundle exec thor gir:generate_all /usr/lib64/mutter-9
 
 # Some of the gnome-shell GIRs need extra include paths
 RUN bundle exec thor gir:generate /usr/share/gnome-shell/Gvc-1.0.gir
@@ -84,9 +82,9 @@ RUN bundle exec thor gir:generate /usr/share/gnome-shell/St-1.0.gir --include /u
 # dbus10, dbusglib10, fontconfig20, freetype220, gdkpixdata20, gl10, libxml220,
 #   win3210, xfixes40, xft20, xlib20, xrandr13
 RUN for docset in appindicator301 appstreamglib10 atk10 atspi20 cairo10 \
-        cally10 cally9 camel12 champlain012 cheese30 clutter10 clutter9 \
-        cluttergdk10 cluttergst30 clutterx1110 clutterx119 cogl10 cogl20 cogl9 \
-        coglpango10 coglpango20 coglpango9 dbusmenu04 ebook12 ebookcontacts12 \
+        cally10 cally8 camel12 champlain012 cheese30 clutter10 clutter8 \
+        cluttergdk10 cluttergst30 clutterx1110 clutterx118 cogl10 cogl20 cogl8 \
+        coglpango10 coglpango20 coglpango8 dbusmenu04 ebook12 ebookcontacts12 \
         edataserver12 edataserverui12 evincedocument30 evinceview30 folks06 \
         folksdummy06 folkseds06 folkstelepathy06 gcab10 gck1 gcr3 gcrui3 \
         gda50 gdata00 gdesktopenums30 gdk20 gdk30 gdk40 gdkpixbuf20 gdkx1120 \
@@ -99,18 +97,17 @@ RUN for docset in appindicator301 appstreamglib10 atk10 atspi20 cairo10 \
         gstvideo10 gstvulkan10 gstwebrtc10 gtk20 gtk30 gtk40 gtkchamplain012 \
         gtkclutter10 gtkosxapplication10 gtksource30 gtksource40 gudev10 \
         gupnp10 gupnpdlna20 gupnpdlnagst20 gvc10 gweather30 gxps01 handy1 \
-        ibus10 javascriptcore40 json10 keybinder30 meta9 nm10 notify07 pango10 \
+        ibus10 javascriptcore40 json10 keybinder30 meta8 nm10 notify07 pango10 \
         pangocairo10 pangoft210 pangoxft10 peas10 peasgtk10 polkit10 \
         polkitagent10 poppler018 rest07 restextras07 rsvg20 secret1 shell01 \
         soup24 soupgnome24 st10 telepathyglib012 tracker20 tracker30 \
         trackercontrol20 trackerminer20 upowerglib10 vte00 vte291 webkit240 \
-        webkit2webextension40 wp04 zpj00 \
+        webkit2webextension40 wp03 zpj00 \
         cally3 clutter3 clutterx113 cogl3 coglpango3 meta3 \
         cally4 clutter4 clutterx114 cogl4 coglpango4 meta4 \
         cally5 clutter5 clutterx115 cogl5 coglpango5 meta5 \
         cally6 clutter6 clutterx116 cogl6 coglpango6 meta6 \
-        cally7 clutter7 clutterx117 cogl7 coglpango7 meta7 \
-        cally8 clutter8 clutterx118 cogl8 coglpango8 meta8; \
+        cally7 clutter7 clutterx117 cogl7 coglpango7 meta7; \
       do echo $docset; bundle exec thor docs:generate $docset --force; done
 
 
