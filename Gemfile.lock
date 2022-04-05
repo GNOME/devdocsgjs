@@ -129,7 +129,7 @@ GEM
     unicode_utils (1.4.0)
     unix_utils (0.0.15)
     xdg (4.2.0)
-    yajl-ruby (1.4.1)
+    yajl-ruby (1.4.2)
 
 PLATFORMS
   ruby
