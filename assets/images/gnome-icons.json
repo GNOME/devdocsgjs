@@ -1,4 +1,7 @@
 {
+  "gjs": [
+    "^gjs$"
+  ],
   "javascript": [
     "^javascript$"
   ],

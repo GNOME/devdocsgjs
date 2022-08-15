@@ -59,6 +59,9 @@ RUN bundle config set --local deployment 'true' && \
 # JavaScript/TypeScript, Jasmine, CSS
 RUN bundle exec thor docs:download css javascript jasmine typescript
 
+# GJS documentation
+RUN bundle exec thor docs:generate gjs_scraper --force
+
 # Generate scrapers
 RUN bundle exec thor gir:generate_all /usr/share/gir-1.0 && \
     bundle exec thor gir:generate_all /usr/lib64/mutter-3 && \
