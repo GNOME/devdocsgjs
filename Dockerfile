@@ -19,7 +19,7 @@ RUN dnf install -y 'dnf-command(builddep)' @development-tools bzip2 gcc-c++ \
         libgcab1-devel libgdata-devel libgda-devel libgda5-devel \
         libgudev-devel libgweather4-devel libgxps-devel libhandy1-devel \
         libmanette-devel libnma{,-gtk4}-devel libnotify-devel libpanel-devel \
-        libpeas-devel libportal{,-gtk3,-gtk4}-devel librsvg2-devel \
+        libpeas{,1}-devel libportal{,-gtk3,-gtk4}-devel librsvg2-devel \
         libsecret-devel libshumate-devel libsoup{,3}-devel mutter pango-devel \
         polkit-devel poppler-glib-devel rest{,0.7}-devel telepathy-glib-devel \
         tracker-devel udisks-devel upower-devel vte{,291,291-gtk4}-devel \
@@ -124,8 +124,8 @@ RUN echo adw1 appindicator301 appstreamglib10 atk10 atspi20 cairo10 \
         gweather30 gweather40 gxps01 handy1 ibus10 javascriptcore40 \
         javascriptcore50 javascriptcore60 json10 keybinder30 manette02 nm10 \
         nma10 nma410 notify07 panel1 pango10 pangocairo10 pangoft210 \
-        pangoxft10 peas10 peasgtk10 polkit10 polkitagent10 poppler018 rest07 \
-        rest10 restextras07 restextras10 rsvg20 secret1 shumate10 snapd2 \
+        pangoxft10 peas10 peasgtk10 peas2 polkit10 polkitagent10 poppler018 \
+        rest07 rest10 restextras07 restextras10 rsvg20 secret1 shumate10 snapd2 \
         soup24 soup30 soupgnome24 telepathyglib012 tracker20 tracker30 \
         trackercontrol20 trackerminer20 upowerglib10 vte00 vte291 vte391 \
         webkit240 webkit241 webkit250 webkit60 webkit2webextension40 \
