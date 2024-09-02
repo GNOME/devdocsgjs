@@ -4,7 +4,6 @@ FROM registry.fedoraproject.org/fedora:41 AS build
 ENV LANG=C.UTF-8
 
 RUN dnf install -y 'dnf-command(builddep)' @development-tools bzip2 gcc-c++ \
-        python3-markdown-it-py \
         NetworkManager-libnm-devel cairo-devel colord{,-gtk,-gtk4}-devel \
         evince-devel flatpak-devel folks-devel gcr{,3}-devel \
         geoclue2-devel geocode-glib2-devel glib2-devel gnome-autoar-devel \
@@ -45,7 +44,10 @@ COPY lib/docs/scrapers/gnome/girs/mutter-14 /usr/lib64/mutter-14
 
 # Install the latest gobject-introspection
 RUN git clone https://gitlab.gnome.org/GNOME/gobject-introspection.git \
-        --branch main --depth=1 /opt/gobject-introspection && \
+        --branch main \
+        --depth=1 \
+        --recurse-submodules \
+        /opt/gobject-introspection && \
     cd /opt/gobject-introspection && \
     meson setup -Ddoctool=enabled _build && \
     meson compile -C _build && \
