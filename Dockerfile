@@ -4,6 +4,7 @@ FROM registry.fedoraproject.org/fedora:41 AS build
 ENV LANG=C.UTF-8
 
 RUN dnf install -y 'dnf-command(builddep)' @development-tools bzip2 gcc-c++ \
+        python3-markdown-it-py \
         NetworkManager-libnm-devel cairo-devel colord{,-gtk,-gtk4}-devel \
         evince-devel flatpak-devel folks-devel gcr{,3}-devel \
         geoclue2-devel geocode-glib2-devel glib2-devel gnome-autoar-devel \
