@@ -150,8 +150,6 @@ RUN echo adw1 appindicator301 appstreamglib10 atk10 atspi20 cairo10 \
         cally15 clutter15 cogl15 coglpango15 meta15 mtk15 shell15 st15 \
         | tr ' ' '\n' | xargs -L1 -P$(nproc) bundle exec thor docs:generate --force
 
-# We deploy in ruby:3.2.2-alpine for size
-#
 # Changes from Dockerfile-alpine:
 # - Copy from the "build" stage instead of the current dir
 # - Update `bundler config` usage
