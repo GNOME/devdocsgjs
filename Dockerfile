@@ -158,7 +158,7 @@ RUN echo adw1 appindicator301 appstreamglib10 atk10 atspi20 cairo10 \
 # - Remove `thor docs:download --all` (performed in "build" stage)
 # - Remove `thor assets:compile` until we run in production mode (TODO)
 # - Fix permissions for "rbuser"
-FROM docker.io/library/ruby:3.2.2-alpine
+FROM docker.io/library/ruby:3.2.2
 
 ENV LANG=C.UTF-8
 ENV ENABLE_SERVICE_WORKER=true
@@ -167,17 +167,18 @@ WORKDIR /devdocs
 
 COPY --from=build /opt/devdocs /devdocs
 
-RUN apk --update add nodejs build-base libstdc++ gzip git zlib-dev libcurl && \
+RUN apt update && \
+    apt-get install -y nodejs build-essential libstdc++6 gzip git zlib1g-dev libcurl4-openssl-dev && \
     gem install bundler && \
     bundle config set system 'true' && \
     bundle config set without 'test' && \
     bundle install && \
-    apk del gzip build-base git zlib-dev && \
+    apt remove build-essential git zlib1g-dev -y && \
     rm -rf /var/cache/apk/* /tmp ~/.gem /root/.bundle/cache \
     /usr/local/bundle/cache /usr/lib/node_modules
 
 # Fix permissions for "rbuser"
-RUN adduser -D -h /devdocs -s /bin/bash -G root -u 1000 rbuser && \
+RUN adduser --disabled-password --home /devdocs --shell /bin/bash --ingroup root --uid 1000 rbuser && \
     chmod -R 775 /devdocs && \
     chown -R rbuser:root /devdocs
 
