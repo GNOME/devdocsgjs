@@ -5,9 +5,11 @@ include:
 staging:
   extends:
     - .buildah
+  tags:
+    - aarch64
   variables:
     OCI_IMAGE_NAME: devdocsgjs
-    OCI_IMAGE_TAG: staging
+    OCI_IMAGE_TAG: aarch64-staging
 
 promote:
   interruptible: true
@@ -16,13 +18,17 @@ promote:
   variables:
     STORAGE_DRIVER: vfs
     BUILDAH_ISOLATION: chroot
+  tags:
+    - aarch64
+  variables:
+    OCI_IMAGE_TAG: aarch64-latest
   script:
-    - buildah pull quay.io/gnome_infrastructure/devdocsgjs:staging
-    - buildah tag quay.io/gnome_infrastructure/devdocsgjs:staging quay.io/gnome_infrastructure/devdocsgjs:latest
+    - buildah pull quay.io/gnome_infrastructure/devdocsgjs:aarch64-staging
+    - buildah tag quay.io/gnome_infrastructure/devdocsgjs:aarch64-staging quay.io/gnome_infrastructure/devdocsgjs:$OCI_IMAGE_TAG
     - >-
       if [ "$CI_COMMIT_REF_PROTECTED" == "true" ]; then
         buildah login -u ${OCI_REGISTRY_USER} -p ${OCI_REGISTRY_PASSWORD} ${OCI_REGISTRY}
-        buildah push quay.io/gnome_infrastructure/devdocsgjs:latest
+        buildah push quay.io/gnome_infrastructure/devdocsgjs:$OCI_IMAGE_TAG
       fi
   rules:
   - if: $CI_COMMIT_REF_NAME == "gnome"
