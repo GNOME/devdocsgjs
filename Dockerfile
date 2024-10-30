@@ -70,7 +70,7 @@ WORKDIR /opt/devdocs
 
 RUN bundle config set --local deployment 'true' && \
     bundle install
-    
+
 # JavaScript/TypeScript, Jasmine, CSS
 RUN bundle exec thor docs:download css javascript jasmine typescript
 
@@ -174,7 +174,8 @@ RUN apt update && \
     bundle config set without 'test' && \
     bundle install && \
     apt remove build-essential git zlib1g-dev -y && \
-    rm -rf /var/cache/apk/* /tmp ~/.gem /root/.bundle/cache \
+    apt autoremove && \
+    rm -rf /var/cache/apt/* /tmp ~/.gem /root/.bundle/cache \
     /usr/local/bundle/cache /usr/lib/node_modules
 
 # Fix permissions for "rbuser"
