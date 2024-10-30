@@ -172,7 +172,7 @@ RUN apt update && \
     bundle config set without 'test' && \
     bundle install && \
     apt remove build-essential git zlib1g-dev -y && \
-    apt autoremove && \
+    apt autoremove -y && \
     rm -rf /var/cache/apt/* /tmp ~/.gem /root/.bundle/cache \
     /usr/local/bundle/cache /usr/lib/node_modules
 
