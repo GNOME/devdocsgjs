@@ -45,6 +45,7 @@ COPY lib/docs/scrapers/gnome/girs/mutter-13 /usr/lib64/mutter-13
 COPY lib/docs/scrapers/gnome/girs/mutter-14 /usr/lib64/mutter-14
 COPY lib/docs/scrapers/gnome/girs/mutter-15 /usr/lib64/mutter-15
 COPY lib/docs/scrapers/gnome/girs/mutter-16 /usr/lib64/mutter-16
+COPY lib/docs/scrapers/gnome/girs/mutter-17 /usr/lib64/mutter-17
 
 # Install the latest gobject-introspection
 RUN git clone https://gitlab.gnome.org/GNOME/gobject-introspection.git \
@@ -91,20 +92,15 @@ RUN bundle exec thor gir:generate_all /usr/share/gir-1.0 && \
     bundle exec thor gir:generate_all /usr/lib64/mutter-6 && \
     bundle exec thor gir:generate_all /usr/lib64/mutter-7 && \
     bundle exec thor gir:generate_all /usr/lib64/mutter-8 && \
-    bundle exec thor gir:generate_all /usr/lib64/mutter-9 --include /usr/share/gnome-shell && \
-    bundle exec thor gir:generate_all /usr/lib64/mutter-10 --include /usr/share/gnome-shell && \
-    bundle exec thor gir:generate_all /usr/lib64/mutter-11 --include /usr/share/gnome-shell && \
-    bundle exec thor gir:generate_all /usr/lib64/mutter-12 --include /usr/share/gnome-shell && \
-    bundle exec thor gir:generate_all /usr/lib64/mutter-13 --include /usr/share/gnome-shell && \
-    bundle exec thor gir:generate_all /usr/lib64/mutter-14 --include /usr/share/gnome-shell && \
-    bundle exec thor gir:generate_all /usr/lib64/mutter-15 --include /usr/share/gnome-shell && \
-    bundle exec thor gir:generate_all /usr/lib64/mutter-16 --include /usr/share/gnome-shell && \
+    bundle exec thor gir:generate_all /usr/lib64/mutter-9 && \
+    bundle exec thor gir:generate_all /usr/lib64/mutter-10 && \
+    bundle exec thor gir:generate_all /usr/lib64/mutter-11 && \
+    bundle exec thor gir:generate_all /usr/lib64/mutter-12 && \
+    bundle exec thor gir:generate_all /usr/lib64/mutter-13 && \
+    bundle exec thor gir:generate_all /usr/lib64/mutter-14 && \
+    bundle exec thor gir:generate_all /usr/lib64/mutter-15 && \
+    bundle exec thor gir:generate_all /usr/lib64/mutter-16 && \
     bundle exec thor gir:generate_all /usr/lib64/mutter-17
-
-# The GNOME Shell GIRs need to include the current mutter GIRs
-RUN bundle exec thor gir:generate /usr/share/gnome-shell/Gvc-1.0.gir
-RUN bundle exec thor gir:generate /usr/share/gnome-shell/Shell-17.gir --include /usr/lib64/mutter-17
-RUN bundle exec thor gir:generate /usr/share/gnome-shell/St-17.gir --include /usr/lib64/mutter-17
 
 # Build docsets
 #
