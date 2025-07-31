@@ -1,5 +1,5 @@
 # We bump this each release to fetch the latest stable GIRs
-FROM registry.fedoraproject.org/fedora:42 AS build
+FROM registry.fedoraproject.org/fedora:43 AS build
 
 ENV LANG=C.UTF-8
 
@@ -44,6 +44,7 @@ COPY lib/docs/scrapers/gnome/girs/mutter-12 /usr/lib64/mutter-12
 COPY lib/docs/scrapers/gnome/girs/mutter-13 /usr/lib64/mutter-13
 COPY lib/docs/scrapers/gnome/girs/mutter-14 /usr/lib64/mutter-14
 COPY lib/docs/scrapers/gnome/girs/mutter-15 /usr/lib64/mutter-15
+COPY lib/docs/scrapers/gnome/girs/mutter-16 /usr/lib64/mutter-16
 
 # Install the latest gobject-introspection
 RUN git clone https://gitlab.gnome.org/GNOME/gobject-introspection.git \
@@ -97,12 +98,13 @@ RUN bundle exec thor gir:generate_all /usr/share/gir-1.0 && \
     bundle exec thor gir:generate_all /usr/lib64/mutter-13 --include /usr/share/gnome-shell && \
     bundle exec thor gir:generate_all /usr/lib64/mutter-14 --include /usr/share/gnome-shell && \
     bundle exec thor gir:generate_all /usr/lib64/mutter-15 --include /usr/share/gnome-shell && \
-    bundle exec thor gir:generate_all /usr/lib64/mutter-16
+    bundle exec thor gir:generate_all /usr/lib64/mutter-16 --include /usr/share/gnome-shell && \
+    bundle exec thor gir:generate_all /usr/lib64/mutter-17
 
 # The GNOME Shell GIRs need to include the current mutter GIRs
 RUN bundle exec thor gir:generate /usr/share/gnome-shell/Gvc-1.0.gir
-RUN bundle exec thor gir:generate /usr/share/gnome-shell/Shell-16.gir --include /usr/lib64/mutter-16
-RUN bundle exec thor gir:generate /usr/share/gnome-shell/St-16.gir --include /usr/lib64/mutter-16
+RUN bundle exec thor gir:generate /usr/share/gnome-shell/Shell-17.gir --include /usr/lib64/mutter-17
+RUN bundle exec thor gir:generate /usr/share/gnome-shell/St-17.gir --include /usr/lib64/mutter-17
 
 # Build docsets
 #
@@ -149,8 +151,9 @@ RUN echo adw1 appindicator301 appstreamglib10 atk10 atspi20 cairo10 \
         cally12 clutter12 cogl12 coglpango12 meta12 shell12 st12 \
         cally13 clutter13 cogl13 coglpango13 meta13 mtk13 shell13 st13 \
         cally14 clutter14 cogl14 coglpango14 meta14 mtk14 shell14 st14 \
-        cally15 clutter15 cogl15 coglpango15 meta15 mtk15 shell15 st15 \
-        cally16 clutter16 cogl16 coglpango16 meta16 mtk16 shell16 st16 \
+        clutter15 cogl15 coglpango15 meta15 mtk15 shell15 st15 \
+        clutter16 cogl16 meta16 mtk16 shell16 st16 \
+        clutter17 cogl17 meta17 mtk17 shell17 st17 \
         | tr ' ' '\n' | xargs -L1 -P$(nproc) bundle exec thor docs:generate --force
 
 # Changes from Dockerfile-alpine:
