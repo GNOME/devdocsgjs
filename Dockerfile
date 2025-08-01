@@ -16,7 +16,7 @@ RUN dnf install -y 'dnf-command(builddep)' @development-tools bzip2 gcc-c++ \
         gtksourceview{3,4,5}-devel libgtop2-devel gupnp{,-dlna,-av}-devel \
         harfbuzz-devel ibus-devel javascriptcoregtk6.0-devel keybinder3-devel \
         libappindicator-gtk3-devel libadwaita-devel libappstream-glib-devel \
-        libgcab1-devel libgdata-devel libgda-devel libgda5-devel \
+        libdex-devel libgcab1-devel libgdata-devel libgda-devel libgda5-devel \
         libgudev-devel libgweather4-devel libgxps-devel libhandy1-devel \
         libmanette-devel libnma{,-gtk4}-devel libnotify-devel libpanel-devel \
         libpeas{,1}-devel libportal{,-gtk3,-gtk4}-devel librsvg2-devel \
@@ -108,7 +108,7 @@ RUN bundle exec thor gir:generate_all /usr/share/gir-1.0 && \
 # dbus10, dbusglib10, fontconfig20, freetype220, gdkpixdata20, gl10, gmodule20,
 #   libxml220, win3210, xfixes40, xft20, xlib20, xrandr13
 RUN echo adw1 appindicator301 appstreamglib10 atk10 atspi20 cairo10 \
-        camel12 colord10 colorhug10 colordgtk10 dbusmenu04 ebook12 \
+        camel12 colord10 colorhug10 colordgtk10 dbusmenu04 dex1 ebook12 \
         ebookcontacts12 ecal20 edatabook12 edatacal20 edataserver12 \
         edataserverui12 edataserverui410 evincedocument30 evinceview30 \
         flatpak10 folks07 folksdummy07 folkseds07 folkstelepathy07 gcab10 gck1 \
