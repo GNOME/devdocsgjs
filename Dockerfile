@@ -23,7 +23,7 @@ RUN dnf install -y 'dnf-command(builddep)' @development-tools bzip2 gcc-c++ \
         libsecret-devel libshumate-devel libsoup{,3}-devel libspelling-devel \
         mutter pango-devel polkit-devel poppler-glib-devel rest{,0.7}-devel \
         telepathy-glib-devel tinysparql-devel udisks-devel upower-devel \
-        vte{,291,291-gtk4}-devel webkit2gtk{4.0,4.1}-devel webkitgtk6.0 \
+        vte{,291,291-gtk4}-devel webkit2gtk4.1-devel webkitgtk6.0 \
         wireplumber-devel && \
     dnf builddep -y gobject-introspection ruby && \
     dnf clean all && \
