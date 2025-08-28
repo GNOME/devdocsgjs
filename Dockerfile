@@ -115,7 +115,7 @@ RUN echo adw1 appindicator301 appstreamglib10 atk10 atspi20 cairo10 \
         gck2 gcr3 gcr4 gcrui3 gda50 gda60 gdata00 gdesktopenums30 gdk20 gdk30 \
         gdk40 gdkpixbuf20 gdkx1120 gdkx1130 gdkx1140 gee08 geoclue20 \
         geocodeglib10 geocodeglib20 gio20 giounix20 girepository20 glib20 \
-        glibunix20 gly1 gnomeautoar01 gnomeautoargtk01 gnomebluetooth10 \
+        glibunix20 gly1 gly2 gnomeautoar01 gnomeautoargtk01 gnomebluetooth10 \
         gnomebluetooth30 gnomebg40 gnomedesktop30  gnomedesktop40 gnomerr40 \
         goa10 gobject20 gom10 granite10 graphene10 grl03 grlnet03 grlpls03 \
         gsk40 gsound10 gspell1 gssdp12 gssdp16 gst10 gstallocators10 gstapp10 \
