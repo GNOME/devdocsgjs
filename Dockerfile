@@ -134,7 +134,7 @@ RUN echo adw1 appindicator301 appstreamglib10 atk10 atspi20 cairo10 \
         telepathyglib012 tracker20 tracker30 trackercontrol20 trackerminer20 \
         tsparql30 upowerglib10 vte00 vte291 vte391 webkit240 webkit241 \
         webkit250 webkit60 webkit2webextension40 webkit2webextension41 \
-        webkit2webextension50 webkitwebprocessextension60 wp04 \
+        webkit2webextension50 webkitwebprocessextension60 wp04 wp05 \
         xdp10 xdpgtk310 xdpgtk410 \
         cally3 clutter3 clutterx113 cogl3 coglpango3 meta3 \
         cally4 clutter4 clutterx114 cogl4 coglpango4 meta4 \
