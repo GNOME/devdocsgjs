@@ -114,27 +114,28 @@ RUN echo adw1 appindicator301 appstreamglib10 atk10 atspi20 cairo10 \
         flatpak10 folks07 folksdummy07 folkseds07 folkstelepathy07 gcab10 gck1 \
         gck2 gcr3 gcr4 gcrui3 gda50 gda60 gdata00 gdesktopenums30 gdk20 gdk30 \
         gdk40 gdkpixbuf20 gdkx1120 gdkx1130 gdkx1140 gee08 geoclue20 \
-        geocodeglib10 geocodeglib20 gio20 giounix20 girepository20 glib20 \
-        glibunix20 gly1 gly2 gnomeautoar01 gnomeautoargtk01 gnomebluetooth10 \
-        gnomebluetooth30 gnomebg40 gnomedesktop30  gnomedesktop40 gnomerr40 \
-        goa10 gobject20 gom10 granite10 graphene10 grl03 grlnet03 grlpls03 \
-        gsk40 gsound10 gspell1 gssdp12 gssdp16 gst10 gstallocators10 gstapp10 \
-        gstaudio10 gstbadaudio10 gstbase10 gstcheck10 gstcodecs10 \
-        gstcontroller10 gstgl10 gstinsertbin10 gstmpegts10 gstnet10 \
-        gstpbutils10 gstplayer10 gstrtp10 gstrtsp10 gstsdp10 gsttag10 \
-        gstvideo10 gstvulkan10 gstwebrtc10 gtk20 gtk30 gtk40 \
-        gtkosxapplication10 gtksource30 gtksource4 gtksource5 gtop20 gudev10 \
-        gupnp12 gupnp16 gupnpav10 gupnpdlna20 gupnpdlnagst20 gupnpigd16 gvc10 \
-        gweather30 gweather40 gxps01 handy1 ibus10 javascriptcore40 \
-        javascriptcore50 javascriptcore60 json10 keybinder30 manette02 nm10 \
-        nma10 nma410 notify07 panel1 pango10 pangocairo10 pangoft210 \
-        pangoxft10 peas10 peasgtk10 peas2 polkit10 polkitagent10 poppler018 \
-        rest07 rest10 restextras07 restextras10 rsvg20 secret1 shumate10 snapd2 \
-        soup24 soup30 soupgnome24 spelling1 telepathyglib012 tracker20 \
-        tracker30 trackercontrol20 trackerminer20 tsparql30 upowerglib10 \
-        vte00 vte291 vte391 webkit240 webkit241 webkit250 webkit60 \
-        webkit2webextension40 webkit2webextension41 webkit2webextension50 \
-        webkitwebprocessextension60 wp04 xdp10 xdpgtk310 xdpgtk410 \
+        geocodeglib10 geocodeglib20 gio20 giounix20 girepository20 \
+        girepository30 glib20 glibunix20 gly1 gly2 gnomeautoar01 \
+        gnomeautoargtk01 gnomebluetooth10 gnomebluetooth30 gnomebg40 \
+        gnomedesktop30 gnomedesktop40 gnomerr40 goa10 gobject20 gom10 \
+        granite10 graphene10 grl03 grlnet03 grlpls03 gsk40 gsound10 gspell1 \
+        gssdp12 gssdp16 gst10 gstallocators10 gstapp10 gstaudio10 \
+        gstbadaudio10 gstbase10 gstcheck10 gstcodecs10 gstcontroller10 gstgl10 \
+        gstinsertbin10 gstmpegts10 gstnet1 gstpbutils10 gstplayer10 gstrtp10 \
+        gstrtsp10 gstsdp10 gsttag10 gstvideo10 gstvulkan10 gstwebrtc10 \
+        gtk20 gtk30 gtk40 gtkosxapplication10 gtksource30 gtksource4 \
+        gtksource5 gtop20 gudev10 gupnp12 gupnp16 gupnpav10 gupnpdlna20 \
+        gupnpdlnagst20 gupnpigd16 gvc10 gweather30 gweather40 gxps01 handy1 \
+        ibus10 javascriptcore40 javascriptcore50 javascriptcore60 json10 \
+        keybinder30 manette02 nm10 nma10 nma410 notify07 panel1 pango10 \
+        pangocairo10 pangoft210 pangoxft10 peas10 peasgtk10 peas2 polkit10 \
+        polkitagent10 poppler018 rest07 rest10 restextras07 restextras10 \
+        rsvg20 secret1 shumate10 snapd2 soup24 soup30 soupgnome24 spelling1 \
+        telepathyglib012 tracker20 tracker30 trackercontrol20 trackerminer20 \
+        tsparql30 upowerglib10 vte00 vte291 vte391 webkit240 webkit241 \
+        webkit250 webkit60 webkit2webextension40 webkit2webextension41 \
+        webkit2webextension50 webkitwebprocessextension60 wp04 \
+        xdp10 xdpgtk310 xdpgtk410 \
         cally3 clutter3 clutterx113 cogl3 coglpango3 meta3 \
         cally4 clutter4 clutterx114 cogl4 coglpango4 meta4 \
         cally5 clutter5 clutterx115 cogl5 coglpango5 meta5 \
