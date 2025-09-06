@@ -10,6 +10,7 @@ and/or use gtk-doc annotations.  -->
   <include name="Clutter" version="17"/>
   <include name="Gcr" version="4"/>
   <include name="GdkPixbuf" version="2.0"/>
+  <include name="GioUnix" version="2.0"/>
   <include name="Gvc" version="1.0"/>
   <include name="Meta" version="17"/>
   <include name="NM" version="1.0"/>
@@ -1409,6 +1410,98 @@ of using this blur mode.</doc>
       <source-position filename="src/shell-camera-monitor.h" line="29"/>
       <field name="parent_class">
         <type name="GObject.ObjectClass" c:type="GObjectClass"/>
+      </field>
+    </record>
+    <class name="EdgeDragGesture"
+           c:symbol-prefix="edge_drag_gesture"
+           c:type="ShellEdgeDragGesture"
+           parent="Clutter.Gesture"
+           final="1"
+           glib:type-name="ShellEdgeDragGesture"
+           glib:get-type="shell_edge_drag_gesture_get_type"
+           glib:type-struct="EdgeDragGestureClass">
+      <source-position filename="src/shell-edge-drag-gesture.h" line="26"/>
+      <method name="get_side"
+              c:identifier="shell_edge_drag_gesture_get_side"
+              glib:get-property="side">
+        <doc xml:space="preserve"
+             filename="src/shell-edge-drag-gesture.c"
+             line="412">Gets the edge of the monitor that the edge drag may start at.</doc>
+        <source-position filename="src/shell-edge-drag-gesture.h" line="32"/>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="src/shell-edge-drag-gesture.c"
+               line="418">the side that the edge drag may start at</doc>
+          <type name="St.Side" c:type="StSide"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/shell-edge-drag-gesture.c"
+                 line="414">a #ShellEdgeDragGesture</doc>
+            <type name="EdgeDragGesture" c:type="ShellEdgeDragGesture*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="set_side"
+              c:identifier="shell_edge_drag_gesture_set_side"
+              glib:set-property="side">
+        <doc xml:space="preserve"
+             filename="src/shell-edge-drag-gesture.c"
+             line="390">Sets the edge of the monitor that the edge drag may start at.</doc>
+        <source-position filename="src/shell-edge-drag-gesture.h" line="29"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/shell-edge-drag-gesture.c"
+                 line="392">a #ShellEdgeDragGesture</doc>
+            <type name="EdgeDragGesture" c:type="ShellEdgeDragGesture*"/>
+          </instance-parameter>
+          <parameter name="side" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/shell-edge-drag-gesture.c"
+                 line="393">the side</doc>
+            <type name="St.Side" c:type="StSide"/>
+          </parameter>
+        </parameters>
+      </method>
+      <property name="side"
+                writable="1"
+                transfer-ownership="none"
+                setter="set_side"
+                getter="get_side"
+                default-value="CLUTTER_GESTURE_STATE_WAITING">
+        <doc xml:space="preserve"
+             filename="src/shell-edge-drag-gesture.c"
+             line="358">Edge that the gesture may start at. Defaults to the top edge.</doc>
+        <type name="Clutter.GestureState"/>
+      </property>
+      <glib:signal name="progress" when="last">
+        <doc xml:space="preserve"
+             filename="src/shell-edge-drag-gesture.c"
+             line="373">The ::progress signal is emitted when the edge drag has moved</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="progress_px" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/shell-edge-drag-gesture.c"
+                 line="376">the progress of the gesture in pixels in the selected direction</doc>
+            <type name="gfloat" c:type="gfloat"/>
+          </parameter>
+        </parameters>
+      </glib:signal>
+    </class>
+    <record name="EdgeDragGestureClass"
+            c:type="ShellEdgeDragGestureClass"
+            glib:is-gtype-struct-for="EdgeDragGesture">
+      <source-position filename="src/shell-edge-drag-gesture.h" line="26"/>
+      <field name="parent_class">
+        <type name="Clutter.GestureClass" c:type="ClutterGestureClass"/>
       </field>
     </record>
     <class name="GLSLEffect"
@@ -4708,7 +4801,7 @@ size, even if that would overflow the size allocated to the stack.</doc>
       <method name="click" c:identifier="shell_tray_icon_click">
         <doc xml:space="preserve"
              filename="src/shell-tray-icon.c"
-             line="300">Fakes a press and release on @icon. @event must be a
+             line="309">Fakes a press and release on @icon. @event must be a
 %CLUTTER_BUTTON_RELEASE, %CLUTTER_KEY_PRESS or %CLUTTER_KEY_RELEASE event.
 Its relevant details will be passed on to the icon, but its
 coordinates will be ignored; the click is
@@ -4721,13 +4814,13 @@ always made on the center of @icon.</doc>
           <instance-parameter name="icon" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/shell-tray-icon.c"
-                 line="302">a #ShellTrayIcon</doc>
+                 line="311">a #ShellTrayIcon</doc>
             <type name="TrayIcon" c:type="ShellTrayIcon*"/>
           </instance-parameter>
           <parameter name="event" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/shell-tray-icon.c"
-                 line="303">the #ClutterEvent triggering the fake click</doc>
+                 line="312">the #ClutterEvent triggering the fake click</doc>
             <type name="Clutter.Event" c:type="ClutterEvent*"/>
           </parameter>
         </parameters>

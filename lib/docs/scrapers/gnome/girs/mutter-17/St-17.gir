@@ -1328,12 +1328,12 @@ and transitions effects between states.</doc>
       <constructor name="new" c:identifier="st_button_new">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="585">Create a new button</doc>
+             line="435">Create a new button</doc>
         <source-position filename="src/st/st-button.h" line="42"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="590">a new #StButton</doc>
+               line="440">a new #StButton</doc>
           <type name="Widget" c:type="StWidget*"/>
         </return-value>
       </constructor>
@@ -1341,19 +1341,19 @@ and transitions effects between states.</doc>
                    c:identifier="st_button_new_with_label">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="598">Create a new #StButton with the specified label</doc>
+             line="448">Create a new #StButton with the specified label</doc>
         <source-position filename="src/st/st-button.h" line="43"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="604">a new #StButton</doc>
+               line="454">a new #StButton</doc>
           <type name="Widget" c:type="StWidget*"/>
         </return-value>
         <parameters>
           <parameter name="text" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="600">text to set the label to</doc>
+                 line="450">text to set the label to</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -1375,7 +1375,7 @@ and transitions effects between states.</doc>
       <method name="fake_release" c:identifier="st_button_fake_release">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="894">If this widget is holding a pointer grab, this function will
+             line="745">If this widget is holding a pointer grab, this function will
 will ungrab it, and reset the #StButton:pressed state.  The effect is
 similar to if the user had released the mouse button, but without
 emitting the #StButton::clicked signal.
@@ -1391,7 +1391,7 @@ time, breaking the grab.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="896">an #StButton</doc>
+                 line="747">an #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1401,13 +1401,13 @@ time, breaking the grab.</doc>
               glib:get-property="button-mask">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="744">Gets the mask of mouse buttons that @button emits the
+             line="594">Gets the mask of mouse buttons that @button emits the
 #StButton::clicked signal for.</doc>
         <source-position filename="src/st/st-button.h" line="78"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="751">the mask of mouse buttons that @button emits the
+               line="601">the mask of mouse buttons that @button emits the
 #StButton::clicked signal for.</doc>
           <type name="ButtonMask" c:type="StButtonMask"/>
         </return-value>
@@ -1415,7 +1415,7 @@ time, breaking the grab.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="746">a #StButton</doc>
+                 line="596">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1425,19 +1425,19 @@ time, breaking the grab.</doc>
               glib:get-property="checked">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="829">Get the #StButton:checked property of a #StButton that is in toggle mode.</doc>
+             line="679">Get the #StButton:checked property of a #StButton that is in toggle mode.</doc>
         <source-position filename="src/st/st-button.h" line="55"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="835">%TRUE if the button is checked, or %FALSE if not</doc>
+               line="685">%TRUE if the button is checked, or %FALSE if not</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="831">a #StButton</doc>
+                 line="681">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1447,20 +1447,20 @@ time, breaking the grab.</doc>
               glib:get-property="icon-name">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="681">Get the icon name of the button. If the button isn't showing an icon,
+             line="531">Get the icon name of the button. If the button isn't showing an icon,
 the return value will be %NULL.</doc>
         <source-position filename="src/st/st-button.h" line="47"/>
         <return-value transfer-ownership="none" nullable="1">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="688">the icon name of the button</doc>
+               line="538">the icon name of the button</doc>
           <type name="utf8" c:type="const char*"/>
         </return-value>
         <parameters>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="683">a #StButton</doc>
+                 line="533">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1470,20 +1470,20 @@ the return value will be %NULL.</doc>
               glib:get-property="label">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="612">Get the text displayed on the button. If the label is empty, an empty string
+             line="462">Get the text displayed on the button. If the label is empty, an empty string
 will be returned instead of %NULL.</doc>
         <source-position filename="src/st/st-button.h" line="44"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="619">the text for the button</doc>
+               line="469">the text for the button</doc>
           <type name="utf8" c:type="const gchar*"/>
         </return-value>
         <parameters>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="614">a #StButton</doc>
+                 line="464">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1493,19 +1493,19 @@ will be returned instead of %NULL.</doc>
               glib:get-property="pressed">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="875">Get the #StButton:pressed property of a #StButton</doc>
+             line="725">Get the #StButton:pressed property of a #StButton</doc>
         <source-position filename="src/st/st-button.h" line="56"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="881">%TRUE if the button is pressed, or %FALSE if not</doc>
+               line="731">%TRUE if the button is pressed, or %FALSE if not</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="877">a #StButton</doc>
+                 line="727">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1515,19 +1515,19 @@ will be returned instead of %NULL.</doc>
               glib:get-property="toggle-mode">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="787">Get the toggle mode status of the button.</doc>
+             line="637">Get the toggle mode status of the button.</doc>
         <source-position filename="src/st/st-button.h" line="52"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="793">%TRUE if toggle mode is set, otherwise %FALSE</doc>
+               line="643">%TRUE if toggle mode is set, otherwise %FALSE</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="789">a #StButton</doc>
+                 line="639">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1537,7 +1537,7 @@ will be returned instead of %NULL.</doc>
               glib:set-property="button-mask">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="762">Sets which mouse buttons @button emits #StButton::clicked for.</doc>
+             line="612">Sets which mouse buttons @button emits #StButton::clicked for.</doc>
         <source-position filename="src/st/st-button.h" line="76"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -1546,13 +1546,13 @@ will be returned instead of %NULL.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="764">a #Stbutton</doc>
+                 line="614">a #Stbutton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
           <parameter name="mask" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="765">the mask of mouse buttons that @button responds to</doc>
+                 line="615">the mask of mouse buttons that @button responds to</doc>
             <type name="ButtonMask" c:type="StButtonMask"/>
           </parameter>
         </parameters>
@@ -1562,7 +1562,7 @@ will be returned instead of %NULL.</doc>
               glib:set-property="checked">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="845">Set the #StButton:checked property of the button. This is only really useful
+             line="695">Set the #StButton:checked property of the button. This is only really useful
 if the button has #StButton:toggle-mode property set to %TRUE.</doc>
         <source-position filename="src/st/st-button.h" line="53"/>
         <return-value transfer-ownership="none">
@@ -1572,13 +1572,13 @@ if the button has #StButton:toggle-mode property set to %TRUE.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="847">a #Stbutton</doc>
+                 line="697">a #Stbutton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
           <parameter name="checked" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="848">%TRUE or %FALSE</doc>
+                 line="698">%TRUE or %FALSE</doc>
             <type name="gboolean" c:type="gboolean"/>
           </parameter>
         </parameters>
@@ -1588,7 +1588,7 @@ if the button has #StButton:toggle-mode property set to %TRUE.</doc>
               glib:set-property="icon-name">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="703">Adds an `StIcon` with the given icon name as a child.
+             line="553">Adds an `StIcon` with the given icon name as a child.
 
 If @button already contains a child actor, that child will
 be removed and replaced with the icon.</doc>
@@ -1600,13 +1600,13 @@ be removed and replaced with the icon.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="705">a #Stbutton</doc>
+                 line="555">a #Stbutton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
           <parameter name="icon_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="706">an icon name</doc>
+                 line="556">an icon name</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
         </parameters>
@@ -1616,7 +1616,7 @@ be removed and replaced with the icon.</doc>
               glib:set-property="label">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="629">Sets the text displayed on the button.</doc>
+             line="479">Sets the text displayed on the button.</doc>
         <source-position filename="src/st/st-button.h" line="45"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -1625,7 +1625,7 @@ be removed and replaced with the icon.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="631">a #Stbutton</doc>
+                 line="481">a #Stbutton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
           <parameter name="text"
@@ -1634,7 +1634,7 @@ be removed and replaced with the icon.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="632">text to set the label to</doc>
+                 line="482">text to set the label to</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -1644,7 +1644,7 @@ be removed and replaced with the icon.</doc>
               glib:set-property="toggle-mode">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="803">Enables or disables toggle mode for the button. In toggle mode, the checked
+             line="653">Enables or disables toggle mode for the button. In toggle mode, the checked
 state will be "toggled" when the user clicks the button.</doc>
         <source-position filename="src/st/st-button.h" line="50"/>
         <return-value transfer-ownership="none">
@@ -1654,13 +1654,13 @@ state will be "toggled" when the user clicks the button.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="805">a #Stbutton</doc>
+                 line="655">a #Stbutton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
           <parameter name="toggle" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="806">%TRUE or %FALSE</doc>
+                 line="656">%TRUE or %FALSE</doc>
             <type name="gboolean" c:type="gboolean"/>
           </parameter>
         </parameters>
@@ -1673,7 +1673,7 @@ state will be "toggled" when the user clicks the button.</doc>
                 default-value="ST_BUTTON_ONE">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="508">Which buttons will trigger the #StButton::clicked signal.</doc>
+             line="348">Which buttons will trigger the #StButton::clicked signal.</doc>
         <type name="ButtonMask"/>
       </property>
       <property name="checked"
@@ -1684,7 +1684,7 @@ state will be "toggled" when the user clicks the button.</doc>
                 default-value="FALSE">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="528">If #StButton:toggle-mode is %TRUE, indicates if the #StButton is toggled
+             line="368">If #StButton:toggle-mode is %TRUE, indicates if the #StButton is toggled
 "on" or "off".
 
 When the value is %TRUE, the #StButton will have the `checked` CSS
@@ -1699,7 +1699,7 @@ pseudo-class set.</doc>
                 default-value="NULL">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="498">The icon name of the #StButton.</doc>
+             line="338">The icon name of the #StButton.</doc>
         <type name="utf8" c:type="gchar*"/>
       </property>
       <property name="label"
@@ -1710,7 +1710,7 @@ pseudo-class set.</doc>
                 default-value="NULL">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="488">The label of the #StButton.</doc>
+             line="328">The label of the #StButton.</doc>
         <type name="utf8" c:type="gchar*"/>
       </property>
       <property name="pressed"
@@ -1719,7 +1719,7 @@ pseudo-class set.</doc>
                 default-value="FALSE">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="542">In contrast to #StButton:checked, this property indicates whether the
+             line="382">In contrast to #StButton:checked, this property indicates whether the
 #StButton is being actively pressed, rather than just in the "on" state.</doc>
         <type name="gboolean" c:type="gboolean"/>
       </property>
@@ -1731,7 +1731,7 @@ pseudo-class set.</doc>
                 default-value="FALSE">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="518">Whether the #StButton is operating in toggle mode (on/off).</doc>
+             line="358">Whether the #StButton is operating in toggle mode (on/off).</doc>
         <type name="gboolean" c:type="gboolean"/>
       </property>
       <field name="parent_instance">
@@ -1740,7 +1740,7 @@ pseudo-class set.</doc>
       <glib:signal name="clicked" when="last">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="556">Emitted when the user activates the button, either with a mouse press and
+             line="396">Emitted when the user activates the button, either with a mouse press and
 release or with the keyboard.</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -1749,7 +1749,7 @@ release or with the keyboard.</doc>
           <parameter name="clicked_button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="559">the mouse button that was used</doc>
+                 line="399">the mouse button that was used</doc>
             <type name="gint" c:type="gint"/>
           </parameter>
         </parameters>
@@ -2245,6 +2245,169 @@ when the data is retrieved.</doc>
              line="47">Move right.</doc>
       </member>
     </enumeration>
+    <class name="DndStartGesture"
+           c:symbol-prefix="dnd_start_gesture"
+           c:type="StDndStartGesture"
+           parent="Clutter.Gesture"
+           glib:type-name="StDndStartGesture"
+           glib:get-type="st_dnd_start_gesture_get_type"
+           glib:type-struct="DndStartGestureClass">
+      <source-position filename="src/st/st-dnd-start-gesture.h" line="14"/>
+      <method name="get_drag_coords"
+              c:identifier="st_dnd_start_gesture_get_drag_coords">
+        <source-position filename="src/st/st-dnd-start-gesture.h" line="20"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="DndStartGesture" c:type="StDndStartGesture*"/>
+          </instance-parameter>
+          <parameter name="coords_out" transfer-ownership="none">
+            <type name="Graphene.Point" c:type="graphene_point_t*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_drag_triggering_event"
+              c:identifier="st_dnd_start_gesture_get_drag_triggering_event">
+        <doc xml:space="preserve"
+             filename="src/st/st-dnd-start-gesture.c"
+             line="302">Returns the #ClutterEvent of the dragging sequence that actually triggered
+the drag.</doc>
+        <source-position filename="src/st/st-dnd-start-gesture.h" line="25"/>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="src/st/st-dnd-start-gesture.c"
+               line="309">A #ClutterEvent</doc>
+          <type name="Clutter.Event" c:type="const ClutterEvent*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/st/st-dnd-start-gesture.c"
+                 line="304">The gesture.</doc>
+            <type name="DndStartGesture" c:type="StDndStartGesture*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_manual_mode"
+              c:identifier="st_dnd_start_gesture_get_manual_mode"
+              glib:get-property="manual-mode">
+        <source-position filename="src/st/st-dnd-start-gesture.h" line="27"/>
+        <return-value transfer-ownership="none">
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="DndStartGesture" c:type="StDndStartGesture*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_point_begin_event"
+              c:identifier="st_dnd_start_gesture_get_point_begin_event">
+        <doc xml:space="preserve"
+             filename="src/st/st-dnd-start-gesture.c"
+             line="282">Returns the first #ClutterEvent of the dragging sequence.</doc>
+        <source-position filename="src/st/st-dnd-start-gesture.h" line="23"/>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="src/st/st-dnd-start-gesture.c"
+               line="288">A #ClutterEvent</doc>
+          <type name="Clutter.Event" c:type="const ClutterEvent*"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <doc xml:space="preserve"
+                 filename="src/st/st-dnd-start-gesture.c"
+                 line="284">The gesture.</doc>
+            <type name="DndStartGesture" c:type="StDndStartGesture*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="get_timeout_threshold"
+              c:identifier="st_dnd_start_gesture_get_timeout_threshold"
+              glib:get-property="timeout-threshold">
+        <source-position filename="src/st/st-dnd-start-gesture.h" line="32"/>
+        <return-value transfer-ownership="none">
+          <type name="guint32" c:type="guint32"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="DndStartGesture" c:type="StDndStartGesture*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
+      <method name="set_manual_mode"
+              c:identifier="st_dnd_start_gesture_set_manual_mode"
+              glib:set-property="manual-mode">
+        <source-position filename="src/st/st-dnd-start-gesture.h" line="29"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="DndStartGesture" c:type="StDndStartGesture*"/>
+          </instance-parameter>
+          <parameter name="manual_mode" transfer-ownership="none">
+            <type name="gboolean" c:type="gboolean"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="set_timeout_threshold"
+              c:identifier="st_dnd_start_gesture_set_timeout_threshold"
+              glib:set-property="timeout-threshold">
+        <source-position filename="src/st/st-dnd-start-gesture.h" line="34"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="DndStartGesture" c:type="StDndStartGesture*"/>
+          </instance-parameter>
+          <parameter name="timeout_threshold_ms" transfer-ownership="none">
+            <type name="guint32" c:type="uint32_t"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="start_drag" c:identifier="st_dnd_start_gesture_start_drag">
+        <source-position filename="src/st/st-dnd-start-gesture.h" line="17"/>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="self" transfer-ownership="none">
+            <type name="DndStartGesture" c:type="StDndStartGesture*"/>
+          </instance-parameter>
+          <parameter name="start_event" transfer-ownership="none">
+            <type name="Clutter.Event" c:type="const ClutterEvent*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <property name="manual-mode"
+                writable="1"
+                transfer-ownership="none"
+                setter="set_manual_mode"
+                getter="get_manual_mode"
+                default-value="FALSE">
+        <type name="gboolean" c:type="gboolean"/>
+      </property>
+      <property name="timeout-threshold"
+                writable="1"
+                transfer-ownership="none"
+                setter="set_timeout_threshold"
+                getter="get_timeout_threshold"
+                default-value="0">
+        <type name="guint" c:type="guint"/>
+      </property>
+    </class>
+    <record name="DndStartGestureClass"
+            c:type="StDndStartGestureClass"
+            glib:is-gtype-struct-for="DndStartGesture">
+      <source-position filename="src/st/st-dnd-start-gesture.h" line="14"/>
+      <field name="parent_class">
+        <type name="Clutter.GestureClass" c:type="ClutterGestureClass"/>
+      </field>
+    </record>
     <class name="DrawingArea"
            c:symbol-prefix="drawing_area"
            c:type="StDrawingArea"
@@ -5965,19 +6128,19 @@ the step or page amount, or by manually dragging the handle.</doc>
               glib:get-property="adjustment">
         <doc xml:space="preserve"
              filename="src/st/st-scroll-bar.c"
-             line="1028">Gets the #StAdjustment that controls the current position of @bar.</doc>
+             line="989">Gets the #StAdjustment that controls the current position of @bar.</doc>
         <source-position filename="src/st/st-scroll-bar.h" line="48"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-scroll-bar.c"
-               line="1034">an #StAdjustment</doc>
+               line="995">an #StAdjustment</doc>
           <type name="Adjustment" c:type="StAdjustment*"/>
         </return-value>
         <parameters>
           <instance-parameter name="bar" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-scroll-bar.c"
-                 line="1030">a #StScrollbar</doc>
+                 line="991">a #StScrollbar</doc>
             <type name="ScrollBar" c:type="StScrollBar*"/>
           </instance-parameter>
         </parameters>
@@ -6034,7 +6197,7 @@ the step or page amount, or by manually dragging the handle.</doc>
                 getter="get_adjustment">
         <doc xml:space="preserve"
              filename="src/st/st-scroll-bar.c"
-             line="544">The #StAdjustment controlling the #StScrollBar.</doc>
+             line="539">The #StAdjustment controlling the #StScrollBar.</doc>
         <type name="Adjustment"/>
       </property>
       <property name="orientation"
@@ -6045,7 +6208,7 @@ the step or page amount, or by manually dragging the handle.</doc>
                 default-value="CLUTTER_ORIENTATION_HORIZONTAL">
         <doc xml:space="preserve"
              filename="src/st/st-scroll-bar.c"
-             line="554">The orientation of the #StScrollBar, horizontal or vertical.</doc>
+             line="549">The orientation of the #StScrollBar, horizontal or vertical.</doc>
         <type name="Clutter.Orientation"/>
       </property>
       <field name="parent_instance">
@@ -6054,7 +6217,7 @@ the step or page amount, or by manually dragging the handle.</doc>
       <glib:signal name="scroll-start" when="last">
         <doc xml:space="preserve"
              filename="src/st/st-scroll-bar.c"
-             line="568">Emitted when the #StScrollBar begins scrolling.</doc>
+             line="563">Emitted when the #StScrollBar begins scrolling.</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
         </return-value>
@@ -6062,7 +6225,7 @@ the step or page amount, or by manually dragging the handle.</doc>
       <glib:signal name="scroll-stop" when="last">
         <doc xml:space="preserve"
              filename="src/st/st-scroll-bar.c"
-             line="582">Emitted when the #StScrollBar finishes scrolling.</doc>
+             line="577">Emitted when the #StScrollBar finishes scrolling.</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
         </return-value>
@@ -8508,19 +8671,19 @@ by using st_theme_context_get_for_stage().</doc>
                 c:identifier="st_theme_context_get_for_stage">
         <doc xml:space="preserve"
              filename="src/st/st-theme-context.c"
-             line="356">Gets a singleton theme context associated with the stage.</doc>
+             line="369">Gets a singleton theme context associated with the stage.</doc>
         <source-position filename="src/st/st-theme-context.h" line="45"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-context.c"
-               line="362">the singleton theme context for the stage</doc>
+               line="375">the singleton theme context for the stage</doc>
           <type name="ThemeContext" c:type="StThemeContext*"/>
         </return-value>
         <parameters>
           <parameter name="stage" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="358">a #ClutterStage</doc>
+                 line="371">a #ClutterStage</doc>
             <type name="Clutter.Stage" c:type="ClutterStage*"/>
           </parameter>
         </parameters>
@@ -8529,7 +8692,7 @@ by using st_theme_context_get_for_stage().</doc>
               c:identifier="st_theme_context_get_accent_color">
         <doc xml:space="preserve"
              filename="src/st/st-theme-context.c"
-             line="487">Gets the current accent color for the theme context.</doc>
+             line="500">Gets the current accent color for the theme context.</doc>
         <source-position filename="src/st/st-theme-context.h" line="55"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -8538,7 +8701,7 @@ by using st_theme_context_get_for_stage().</doc>
           <instance-parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="489">a #StThemeContext</doc>
+                 line="502">a #StThemeContext</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </instance-parameter>
           <parameter name="color"
@@ -8548,7 +8711,7 @@ by using st_theme_context_get_for_stage().</doc>
                      nullable="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="490">the accent color</doc>
+                 line="503">the accent color</doc>
             <type name="Cogl.Color" c:type="CoglColor*"/>
           </parameter>
           <parameter name="fg_color"
@@ -8558,7 +8721,7 @@ by using st_theme_context_get_for_stage().</doc>
                      nullable="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="491">the foreground accent color</doc>
+                 line="504">the foreground accent color</doc>
             <type name="Cogl.Color" c:type="CoglColor*"/>
           </parameter>
         </parameters>
@@ -8566,12 +8729,12 @@ by using st_theme_context_get_for_stage().</doc>
       <method name="get_font" c:identifier="st_theme_context_get_font">
         <doc xml:space="preserve"
              filename="src/st/st-theme-context.c"
-             line="471">Gets the default font for the theme context. See st_theme_context_set_font().</doc>
+             line="484">Gets the default font for the theme context. See st_theme_context_set_font().</doc>
         <source-position filename="src/st/st-theme-context.h" line="53"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-context.c"
-               line="477">the default font for the theme context.</doc>
+               line="490">the default font for the theme context.</doc>
           <type name="Pango.FontDescription"
                 c:type="const PangoFontDescription*"/>
         </return-value>
@@ -8579,7 +8742,7 @@ by using st_theme_context_get_for_stage().</doc>
           <instance-parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="473">a #StThemeContext</doc>
+                 line="486">a #StThemeContext</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </instance-parameter>
         </parameters>
@@ -8590,14 +8753,14 @@ by using st_theme_context_get_for_stage().</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-context.c"
-               line="594">The font resolution</doc>
+               line="607">The font resolution</doc>
           <type name="gdouble" c:type="double"/>
         </return-value>
         <parameters>
           <instance-parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="592">a #StThemeContext</doc>
+                 line="605">a #StThemeContext</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </instance-parameter>
         </parameters>
@@ -8606,21 +8769,21 @@ by using st_theme_context_get_for_stage().</doc>
               c:identifier="st_theme_context_get_root_node">
         <doc xml:space="preserve"
              filename="src/st/st-theme-context.c"
-             line="509">Gets the root node of the tree of theme style nodes that associated with this
+             line="522">Gets the root node of the tree of theme style nodes that associated with this
 context. For the node tree associated with a stage, this node represents
 styles applied to the stage itself.</doc>
         <source-position filename="src/st/st-theme-context.h" line="59"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-context.c"
-               line="517">the root node of the context's style tree</doc>
+               line="530">the root node of the context's style tree</doc>
           <type name="ThemeNode" c:type="StThemeNode*"/>
         </return-value>
         <parameters>
           <instance-parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="511">a #StThemeContext</doc>
+                 line="524">a #StThemeContext</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </instance-parameter>
         </parameters>
@@ -8630,19 +8793,19 @@ styles applied to the stage itself.</doc>
               glib:get-property="scale-factor">
         <doc xml:space="preserve"
              filename="src/st/st-theme-context.c"
-             line="553">Return the current scale factor of @context.</doc>
+             line="566">Return the current scale factor of @context.</doc>
         <source-position filename="src/st/st-theme-context.h" line="64"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-context.c"
-               line="559">an integer scale factor</doc>
+               line="572">an integer scale factor</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="555">a #StThemeContext</doc>
+                 line="568">a #StThemeContext</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </instance-parameter>
         </parameters>
@@ -8650,19 +8813,19 @@ styles applied to the stage itself.</doc>
       <method name="get_theme" c:identifier="st_theme_context_get_theme">
         <doc xml:space="preserve"
              filename="src/st/st-theme-context.c"
-             line="428">Gets the default theme for the context. See st_theme_context_set_theme()</doc>
+             line="441">Gets the default theme for the context. See st_theme_context_set_theme()</doc>
         <source-position filename="src/st/st-theme-context.h" line="49"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-context.c"
-               line="434">the default theme for the context</doc>
+               line="447">the default theme for the context</doc>
           <type name="Theme" c:type="StTheme*"/>
         </return-value>
         <parameters>
           <instance-parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="430">a #StThemeContext</doc>
+                 line="443">a #StThemeContext</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </instance-parameter>
         </parameters>
@@ -8670,26 +8833,26 @@ styles applied to the stage itself.</doc>
       <method name="intern_node" c:identifier="st_theme_context_intern_node">
         <doc xml:space="preserve"
              filename="src/st/st-theme-context.c"
-             line="529">Return an existing node matching @node, or if that isn't possible,
+             line="542">Return an existing node matching @node, or if that isn't possible,
 @node itself.</doc>
         <source-position filename="src/st/st-theme-context.h" line="61"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-context.c"
-               line="537">a node with the same properties as @node</doc>
+               line="550">a node with the same properties as @node</doc>
           <type name="ThemeNode" c:type="StThemeNode*"/>
         </return-value>
         <parameters>
           <instance-parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="531">a #StThemeContext</doc>
+                 line="544">a #StThemeContext</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </instance-parameter>
           <parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="532">a #StThemeNode</doc>
+                 line="545">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </parameter>
         </parameters>
@@ -8697,7 +8860,7 @@ styles applied to the stage itself.</doc>
       <method name="set_font" c:identifier="st_theme_context_set_font">
         <doc xml:space="preserve"
              filename="src/st/st-theme-context.c"
-             line="444">Sets the default font for the theme context. This is the font that
+             line="457">Sets the default font for the theme context. This is the font that
 is inherited by the root node of the tree of theme nodes. If the
 font is not overridden, then this font will be used. If the font is
 partially modified (for example, with 'font-size: 110%'), then that
@@ -8710,13 +8873,13 @@ modification is based on this font.</doc>
           <instance-parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="446">a #StThemeContext</doc>
+                 line="459">a #StThemeContext</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </instance-parameter>
           <parameter name="font" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="447">the default font for theme context</doc>
+                 line="460">the default font for theme context</doc>
             <type name="Pango.FontDescription"
                   c:type="const PangoFontDescription*"/>
           </parameter>
@@ -8727,7 +8890,7 @@ modification is based on this font.</doc>
               glib:set-property="scale-factor">
         <doc xml:space="preserve"
              filename="src/st/st-theme-context.c"
-             line="569">Set the new scale factor of @context.</doc>
+             line="582">Set the new scale factor of @context.</doc>
         <source-position filename="src/st/st-theme-context.h" line="65"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -8736,13 +8899,13 @@ modification is based on this font.</doc>
           <instance-parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="571">a #StThemeContext</doc>
+                 line="584">a #StThemeContext</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </instance-parameter>
           <parameter name="factor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="572">the new factor</doc>
+                 line="585">the new factor</doc>
             <type name="gint" c:type="int"/>
           </parameter>
         </parameters>
@@ -8750,7 +8913,7 @@ modification is based on this font.</doc>
       <method name="set_theme" c:identifier="st_theme_context_set_theme">
         <doc xml:space="preserve"
              filename="src/st/st-theme-context.c"
-             line="392">Sets the default set of theme stylesheets for the context. This theme will
+             line="405">Sets the default set of theme stylesheets for the context. This theme will
 be used for the root node and for nodes descending from it, unless some other
 style is explicitly specified.</doc>
         <source-position filename="src/st/st-theme-context.h" line="47"/>
@@ -8761,13 +8924,13 @@ style is explicitly specified.</doc>
           <instance-parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="394">a #StThemeContext</doc>
+                 line="407">a #StThemeContext</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </instance-parameter>
           <parameter name="theme" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-context.c"
-                 line="395">a #StTheme</doc>
+                 line="408">a #StTheme</doc>
             <type name="Theme" c:type="StTheme*"/>
           </parameter>
         </parameters>
@@ -8830,21 +8993,21 @@ display devices (eg. when `scale-monitor-framebuffer` is enabled).</doc>
       <constructor name="new" c:identifier="st_theme_node_new">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="166">Creates a new #StThemeNode. Once created, a node is immutable. If any
+             line="165">Creates a new #StThemeNode. Once created, a node is immutable. If any
 of the attributes of the node (like the @element_class) change the node
 and its child nodes must be destroyed and recreated.</doc>
         <source-position filename="src/st/st-theme-node.h" line="180"/>
         <return-value transfer-ownership="full">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="186">a new #StThemeNode</doc>
+               line="185">a new #StThemeNode</doc>
           <type name="ThemeNode" c:type="StThemeNode*"/>
         </return-value>
         <parameters>
           <parameter name="context" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="168">the context representing global state for this themed tree</doc>
+                 line="167">the context representing global state for this themed tree</doc>
             <type name="ThemeContext" c:type="StThemeContext*"/>
           </parameter>
           <parameter name="parent_node"
@@ -8853,7 +9016,7 @@ and its child nodes must be destroyed and recreated.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="169">the parent node of this node</doc>
+                 line="168">the parent node of this node</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </parameter>
           <parameter name="theme"
@@ -8862,14 +9025,14 @@ and its child nodes must be destroyed and recreated.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="170">a theme (stylesheet set) that overrides the
+                 line="169">a theme (stylesheet set) that overrides the
   theme inherited from the parent node</doc>
             <type name="Theme" c:type="StTheme*"/>
           </parameter>
           <parameter name="element_type" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="172">the type of the GObject represented by this node
+                 line="171">the type of the GObject represented by this node
  in the tree (corresponding to an element if we were theming an XML
  document. %G_TYPE_NONE means this style was created for the stage
 actor and matches a selector element name of 'stage'.</doc>
@@ -8881,7 +9044,7 @@ actor and matches a selector element name of 'stage'.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="176">the ID to match CSS rules against</doc>
+                 line="175">the ID to match CSS rules against</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
           <parameter name="element_class"
@@ -8890,7 +9053,7 @@ actor and matches a selector element name of 'stage'.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="177">a whitespace-separated list of classes
+                 line="176">a whitespace-separated list of classes
   to match CSS rules against</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
@@ -8900,7 +9063,7 @@ actor and matches a selector element name of 'stage'.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="179">a whitespace-separated list of pseudo-classes
+                 line="178">a whitespace-separated list of pseudo-classes
   (like 'hover' or 'visited') to match CSS rules against</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
@@ -8913,7 +9076,7 @@ actor and matches a selector element name of 'stage'.</doc>
               c:identifier="st_theme_node_adjust_for_height">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4137">Adjusts a "for height" passed to clutter_actor_get_preferred_width() to
+             line="4136">Adjusts a "for height" passed to clutter_actor_get_preferred_width() to
 account for borders and padding. This is a convenience function meant
 to be called from a get_preferred_width() method of a #ClutterActor
 subclass. The value after adjustment is the height available for the actor's
@@ -8926,7 +9089,7 @@ content.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4139">a #StThemeNode</doc>
+                 line="4138">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="for_height"
@@ -8935,7 +9098,7 @@ content.</doc>
                      transfer-ownership="full">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4140">the "for height" to adjust</doc>
+                 line="4139">the "for height" to adjust</doc>
             <type name="gfloat" c:type="float*"/>
           </parameter>
         </parameters>
@@ -8944,7 +9107,7 @@ content.</doc>
               c:identifier="st_theme_node_adjust_for_width">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4204">Adjusts a "for width" passed to clutter_actor_get_preferred_height() to
+             line="4203">Adjusts a "for width" passed to clutter_actor_get_preferred_height() to
 account for borders and padding. This is a convenience function meant
 to be called from a get_preferred_height() method of a #ClutterActor
 subclass. The value after adjustment is the width available for the actor's
@@ -8957,7 +9120,7 @@ content.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4206">a #StThemeNode</doc>
+                 line="4205">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="for_width"
@@ -8966,7 +9129,7 @@ content.</doc>
                      transfer-ownership="full">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4207">the "for width" to adjust</doc>
+                 line="4206">the "for width" to adjust</doc>
             <type name="gfloat" c:type="float*"/>
           </parameter>
         </parameters>
@@ -8975,7 +9138,7 @@ content.</doc>
               c:identifier="st_theme_node_adjust_preferred_height">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4229">Adjusts the minimum and natural height computed for an actor by
+             line="4228">Adjusts the minimum and natural height computed for an actor by
 adding on the necessary space for borders and padding and taking
 into account any minimum or maximum height. This is a convenience
 function meant to be called from the get_preferred_height() method
@@ -8988,7 +9151,7 @@ of a #ClutterActor subclass</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4231">a #StThemeNode</doc>
+                 line="4230">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="min_height_p"
@@ -8999,7 +9162,7 @@ of a #ClutterActor subclass</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4232">the minimum height to adjust</doc>
+                 line="4231">the minimum height to adjust</doc>
             <type name="gfloat" c:type="float*"/>
           </parameter>
           <parameter name="natural_height_p"
@@ -9008,7 +9171,7 @@ of a #ClutterActor subclass</doc>
                      transfer-ownership="full">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4233">the natural height to adjust</doc>
+                 line="4232">the natural height to adjust</doc>
             <type name="gfloat" c:type="float*"/>
           </parameter>
         </parameters>
@@ -9017,7 +9180,7 @@ of a #ClutterActor subclass</doc>
               c:identifier="st_theme_node_adjust_preferred_width">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4162">Adjusts the minimum and natural width computed for an actor by
+             line="4161">Adjusts the minimum and natural width computed for an actor by
 adding on the necessary space for borders and padding and taking
 into account any minimum or maximum width. This is a convenience
 function meant to be called from the get_preferred_width() method
@@ -9030,7 +9193,7 @@ of a #ClutterActor subclass</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4164">a #StThemeNode</doc>
+                 line="4163">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="min_width_p"
@@ -9041,7 +9204,7 @@ of a #ClutterActor subclass</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4165">the minimum width to adjust</doc>
+                 line="4164">the minimum width to adjust</doc>
             <type name="gfloat" c:type="float*"/>
           </parameter>
           <parameter name="natural_width_p"
@@ -9050,7 +9213,7 @@ of a #ClutterActor subclass</doc>
                      transfer-ownership="full">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4166">the natural width to adjust</doc>
+                 line="4165">the natural width to adjust</doc>
             <type name="gfloat" c:type="float*"/>
           </parameter>
         </parameters>
@@ -9058,7 +9221,7 @@ of a #ClutterActor subclass</doc>
       <method name="equal" c:identifier="st_theme_node_equal">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="322">Compare two #StThemeNodes. Two nodes which compare equal will match
+             line="321">Compare two #StThemeNodes. Two nodes which compare equal will match
 the same CSS rules and have the same style properties. However, two
 nodes that have ended up with identical style properties do not
 necessarily compare equal.
@@ -9073,20 +9236,20 @@ In detail, @node_a and @node_b are considered equal if and only if:
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="339">%TRUE if @node_a equals @node_b</doc>
+               line="338">%TRUE if @node_a equals @node_b</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="node_a" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="324">first #StThemeNode</doc>
+                 line="323">first #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="node_b" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="325">second #StThemeNode</doc>
+                 line="324">second #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </parameter>
         </parameters>
@@ -9095,27 +9258,27 @@ In detail, @node_a and @node_b are considered equal if and only if:
               c:identifier="st_theme_node_geometry_equal">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4399">Tests if two theme nodes have the same borders and padding; this can be
+             line="4398">Tests if two theme nodes have the same borders and padding; this can be
 used to optimize having to relayout when the style applied to a Clutter
 actor changes colors without changing the geometry.</doc>
         <source-position filename="src/st/st-theme-node.h" line="337"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="4408">%TRUE if equal, %FALSE otherwise</doc>
+               line="4407">%TRUE if equal, %FALSE otherwise</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4401">a #StThemeNode</doc>
+                 line="4400">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="other" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4402">a different #StThemeNode</doc>
+                 line="4401">a different #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </parameter>
         </parameters>
@@ -9124,7 +9287,7 @@ actor changes colors without changing the geometry.</doc>
               c:identifier="st_theme_node_get_background_color">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2518">Gets @node's background color.</doc>
+             line="2517">Gets @node's background color.</doc>
         <source-position filename="src/st/st-theme-node.h" line="246"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -9133,7 +9296,7 @@ actor changes colors without changing the geometry.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2520">a #StThemeNode</doc>
+                 line="2519">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="color"
@@ -9142,7 +9305,7 @@ actor changes colors without changing the geometry.</doc>
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2521">location to store the color</doc>
+                 line="2520">location to store the color</doc>
             <type name="Cogl.Color" c:type="CoglColor*"/>
           </parameter>
         </parameters>
@@ -9151,7 +9314,7 @@ actor changes colors without changing the geometry.</doc>
               c:identifier="st_theme_node_get_background_gradient">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2598">The @start and @end arguments will only be set if @type is not #ST_GRADIENT_NONE.</doc>
+             line="2597">The @start and @end arguments will only be set if @type is not #ST_GRADIENT_NONE.</doc>
         <source-position filename="src/st/st-theme-node.h" line="250"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -9160,7 +9323,7 @@ actor changes colors without changing the geometry.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2600">A #StThemeNode</doc>
+                 line="2599">A #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="type"
@@ -9169,7 +9332,7 @@ actor changes colors without changing the geometry.</doc>
                      transfer-ownership="full">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2601">Type of gradient</doc>
+                 line="2600">Type of gradient</doc>
             <type name="GradientType" c:type="StGradientType*"/>
           </parameter>
           <parameter name="start"
@@ -9178,7 +9341,7 @@ actor changes colors without changing the geometry.</doc>
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2602">Color at start of gradient</doc>
+                 line="2601">Color at start of gradient</doc>
             <type name="Cogl.Color" c:type="CoglColor*"/>
           </parameter>
           <parameter name="end"
@@ -9187,7 +9350,7 @@ actor changes colors without changing the geometry.</doc>
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2603">Color at end of gradient</doc>
+                 line="2602">Color at end of gradient</doc>
             <type name="Cogl.Color" c:type="CoglColor*"/>
           </parameter>
         </parameters>
@@ -9198,14 +9361,14 @@ actor changes colors without changing the geometry.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2540">@node's background image.</doc>
+               line="2539">@node's background image.</doc>
           <type name="Gio.File" c:type="GFile*"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2538">a #StThemeNode</doc>
+                 line="2537">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9214,12 +9377,12 @@ actor changes colors without changing the geometry.</doc>
               c:identifier="st_theme_node_get_background_image_shadow">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="3911">Gets the value for the -st-background-image-shadow style property</doc>
+             line="3910">Gets the value for the -st-background-image-shadow style property</doc>
         <source-position filename="src/st/st-theme-node.h" line="308"/>
         <return-value transfer-ownership="none" nullable="1">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="3917">the node's background image shadow, or
+               line="3916">the node's background image shadow, or
   %NULL if node has no such shadow</doc>
           <type name="Shadow" c:type="StShadow*"/>
         </return-value>
@@ -9227,7 +9390,7 @@ actor changes colors without changing the geometry.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3913">a #StThemeNode</doc>
+                 line="3912">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9236,7 +9399,7 @@ actor changes colors without changing the geometry.</doc>
               c:identifier="st_theme_node_get_background_paint_box">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4315">Gets the box used to paint the actor's background, including the area
+             line="4314">Gets the box used to paint the actor's background, including the area
 occupied by properties which paint outside the actor's assigned allocation.</doc>
         <source-position filename="src/st/st-theme-node.h" line="333"/>
         <return-value transfer-ownership="none">
@@ -9246,13 +9409,13 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4317">a #StThemeNode</doc>
+                 line="4316">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="allocation" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4318">the box allocated to a #ClutterActor</doc>
+                 line="4317">the box allocated to a #ClutterActor</doc>
             <type name="Clutter.ActorBox" c:type="const ClutterActorBox*"/>
           </parameter>
           <parameter name="paint_box"
@@ -9261,7 +9424,7 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4319">computed box occupied when painting the actor's background</doc>
+                 line="4318">computed box occupied when painting the actor's background</doc>
             <type name="Clutter.ActorBox" c:type="ClutterActorBox*"/>
           </parameter>
         </parameters>
@@ -9270,7 +9433,7 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
               c:identifier="st_theme_node_get_border_color">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2625">Gets the color of @node's border on @side</doc>
+             line="2624">Gets the color of @node's border on @side</doc>
         <source-position filename="src/st/st-theme-node.h" line="261"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -9279,13 +9442,13 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2627">a #StThemeNode</doc>
+                 line="2626">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="side" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2628">a #StSide</doc>
+                 line="2627">a #StSide</doc>
             <type name="Side" c:type="StSide"/>
           </parameter>
           <parameter name="color"
@@ -9294,7 +9457,7 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2629">location to store the color</doc>
+                 line="2628">location to store the color</doc>
             <type name="Cogl.Color" c:type="CoglColor*"/>
           </parameter>
         </parameters>
@@ -9303,12 +9466,12 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
               c:identifier="st_theme_node_get_border_image">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="3439">Gets the value for the border-image style property</doc>
+             line="3438">Gets the value for the border-image style property</doc>
         <source-position filename="src/st/st-theme-node.h" line="304"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="3445">the border image, or %NULL
+               line="3444">the border image, or %NULL
   if there is no border image.</doc>
           <type name="BorderImage" c:type="StBorderImage*"/>
         </return-value>
@@ -9316,7 +9479,7 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3441">a #StThemeNode</doc>
+                 line="3440">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9325,25 +9488,25 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
               c:identifier="st_theme_node_get_border_radius">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2130">Get the border radius for @node at @corner, in physical pixels.</doc>
+             line="2129">Get the border radius for @node at @corner, in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="259"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2137">the border radius in physical pixels</doc>
+               line="2136">the border radius in physical pixels</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2132">a #StThemeNode</doc>
+                 line="2131">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="corner" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2133">a #StCorner</doc>
+                 line="2132">a #StCorner</doc>
             <type name="Corner" c:type="StCorner"/>
           </parameter>
         </parameters>
@@ -9352,25 +9515,25 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
               c:identifier="st_theme_node_get_border_width">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2109">Get the border width for @node on @side, in physical pixels.</doc>
+             line="2108">Get the border width for @node on @side, in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="257"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2116">the border width in physical pixels</doc>
+               line="2115">the border width in physical pixels</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2111">a #StThemeNode</doc>
+                 line="2110">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="side" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2112">a #StCorner</doc>
+                 line="2111">a #StCorner</doc>
             <type name="Side" c:type="StSide"/>
           </parameter>
         </parameters>
@@ -9379,12 +9542,12 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
               c:identifier="st_theme_node_get_box_shadow">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="3876">Gets the value for the box-shadow style property</doc>
+             line="3875">Gets the value for the box-shadow style property</doc>
         <source-position filename="src/st/st-theme-node.h" line="305"/>
         <return-value transfer-ownership="none" nullable="1">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="3882">the node's shadow, or %NULL
+               line="3881">the node's shadow, or %NULL
   if node has no shadow</doc>
           <type name="Shadow" c:type="StShadow*"/>
         </return-value>
@@ -9392,7 +9555,7 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3878">a #StThemeNode</doc>
+                 line="3877">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9400,7 +9563,7 @@ occupied by properties which paint outside the actor's assigned allocation.</doc
       <method name="get_color" c:identifier="st_theme_node_get_color">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="964">Generically looks up a property containing a single color value. When
+             line="963">Generically looks up a property containing a single color value. When
 specific getters (like st_theme_node_get_background_color()) exist, they
 should be used instead. They are cached, so more efficient, and have
 handling for shortcut properties and other details of CSS.
@@ -9419,13 +9582,13 @@ indicated color.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="966">a #StThemeNode</doc>
+                 line="965">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="967">The name of the color property</doc>
+                 line="966">The name of the color property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
           <parameter name="color"
@@ -9434,7 +9597,7 @@ indicated color.</doc>
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="968">location to store the color that
+                 line="967">location to store the color that
   was determined.</doc>
             <type name="Cogl.Color" c:type="CoglColor*"/>
           </parameter>
@@ -9444,7 +9607,7 @@ indicated color.</doc>
               c:identifier="st_theme_node_get_content_box">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4270">Gets the box within an actor's allocation that contents the content
+             line="4269">Gets the box within an actor's allocation that contents the content
 of an actor (excluding borders and padding). This is a convenience function
 meant to be used from the allocate() or paint() methods of a #ClutterActor
 subclass.</doc>
@@ -9456,13 +9619,13 @@ subclass.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4272">a #StThemeNode</doc>
+                 line="4271">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="allocation" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4273">the box allocated to a #ClutterAlctor</doc>
+                 line="4272">the box allocated to a #ClutterAlctor</doc>
             <type name="Clutter.ActorBox" c:type="const ClutterActorBox*"/>
           </parameter>
           <parameter name="content_box"
@@ -9471,7 +9634,7 @@ subclass.</doc>
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4274">computed box occupied by the actor's content</doc>
+                 line="4273">computed box occupied by the actor's content</doc>
             <type name="Clutter.ActorBox" c:type="ClutterActorBox*"/>
           </parameter>
         </parameters>
@@ -9479,7 +9642,7 @@ subclass.</doc>
       <method name="get_double" c:identifier="st_theme_node_get_double">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="1117">Generically looks up a property containing a single numeric value
+             line="1116">Generically looks up a property containing a single numeric value
  without units.
 
 See also st_theme_node_lookup_double(), which provides more options,
@@ -9489,7 +9652,7 @@ indicated value.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="1129">the value found. If @property_name is not
+               line="1128">the value found. If @property_name is not
  found, a warning will be logged and 0 will be returned.</doc>
           <type name="gdouble" c:type="gdouble"/>
         </return-value>
@@ -9497,13 +9660,13 @@ indicated value.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1119">a #StThemeNode</doc>
+                 line="1118">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1120">The name of the numeric property</doc>
+                 line="1119">The name of the numeric property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
         </parameters>
@@ -9512,12 +9675,12 @@ indicated value.</doc>
               c:identifier="st_theme_node_get_element_classes">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="290">Get the list of element classes for @node.</doc>
+             line="289">Get the list of element classes for @node.</doc>
         <source-position filename="src/st/st-theme-node.h" line="198"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="296">the element's classes</doc>
+               line="295">the element's classes</doc>
           <array c:type="GStrv">
             <type name="utf8"/>
           </array>
@@ -9526,7 +9689,7 @@ indicated value.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="292">a #StThemeNode</doc>
+                 line="291">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9535,19 +9698,19 @@ indicated value.</doc>
               c:identifier="st_theme_node_get_element_id">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="274">Get the unique element ID for @node.</doc>
+             line="273">Get the unique element ID for @node.</doc>
         <source-position filename="src/st/st-theme-node.h" line="197"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="280">the element's ID</doc>
+               line="279">the element's ID</doc>
           <type name="utf8" c:type="const char*"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="276">a #StThemeNode</doc>
+                 line="275">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9556,19 +9719,19 @@ indicated value.</doc>
               c:identifier="st_theme_node_get_element_type">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="258">Get the element #GType for @node.</doc>
+             line="257">Get the element #GType for @node.</doc>
         <source-position filename="src/st/st-theme-node.h" line="196"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="264">the element type</doc>
+               line="263">the element type</doc>
           <type name="GType" c:type="GType"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="260">a #StThemeNode</doc>
+                 line="259">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9576,12 +9739,12 @@ indicated value.</doc>
       <method name="get_font" c:identifier="st_theme_node_get_font">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="3193">Get the current font of @node as a #PangoFontDescription</doc>
+             line="3192">Get the current font of @node as a #PangoFontDescription</doc>
         <source-position filename="src/st/st-theme-node.h" line="300"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="3199">the current font</doc>
+               line="3198">the current font</doc>
           <type name="Pango.FontDescription"
                 c:type="const PangoFontDescription*"/>
         </return-value>
@@ -9589,7 +9752,7 @@ indicated value.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3195">a #StThemeNode</doc>
+                 line="3194">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9598,19 +9761,19 @@ indicated value.</doc>
               c:identifier="st_theme_node_get_font_features">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="3396">Get the CSS font-features for @node.</doc>
+             line="3395">Get the CSS font-features for @node.</doc>
         <source-position filename="src/st/st-theme-node.h" line="302"/>
         <return-value transfer-ownership="full">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="3402">font-features as a string</doc>
+               line="3401">font-features as a string</doc>
           <type name="utf8" c:type="gchar*"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3398">a #StThemeNode</doc>
+                 line="3397">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9619,7 +9782,7 @@ indicated value.</doc>
               c:identifier="st_theme_node_get_foreground_color">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2552">Gets @node's foreground color.</doc>
+             line="2551">Gets @node's foreground color.</doc>
         <source-position filename="src/st/st-theme-node.h" line="248"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -9628,7 +9791,7 @@ indicated value.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2554">a #StThemeNode</doc>
+                 line="2553">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="color"
@@ -9637,7 +9800,7 @@ indicated value.</doc>
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2555">location to store the color</doc>
+                 line="2554">location to store the color</doc>
             <type name="Cogl.Color" c:type="CoglColor*"/>
           </parameter>
         </parameters>
@@ -9645,19 +9808,19 @@ indicated value.</doc>
       <method name="get_height" c:identifier="st_theme_node_get_height">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2204">Get the height for @node, in physical pixels.</doc>
+             line="2203">Get the height for @node, in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="279"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2210">the height in physical pixels</doc>
+               line="2209">the height in physical pixels</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2206">a #StThemeNode</doc>
+                 line="2205">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9666,19 +9829,19 @@ indicated value.</doc>
               c:identifier="st_theme_node_get_horizontal_padding">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="3580">Gets the total horizontal padding (left + right padding), in physical pixels.</doc>
+             line="3579">Gets the total horizontal padding (left + right padding), in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="272"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="3586">the total horizontal padding in physical pixels</doc>
+               line="3585">the total horizontal padding in physical pixels</doc>
           <type name="gdouble" c:type="double"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3582">a #StThemeNode</doc>
+                 line="3581">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9687,20 +9850,20 @@ indicated value.</doc>
               c:identifier="st_theme_node_get_icon_colors">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4001">Gets the colors that should be used for colorizing symbolic icons according
+             line="4000">Gets the colors that should be used for colorizing symbolic icons according
 the style of this node.</doc>
         <source-position filename="src/st/st-theme-node.h" line="310"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="4008">the icon colors to use for this theme node</doc>
+               line="4007">the icon colors to use for this theme node</doc>
           <type name="IconColors" c:type="StIconColors*"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4003">a #StThemeNode</doc>
+                 line="4002">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9709,20 +9872,20 @@ the style of this node.</doc>
               c:identifier="st_theme_node_get_icon_style">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2722">Get the icon style for @node (eg. symbolic, regular). This corresponds to the
+             line="2721">Get the icon style for @node (eg. symbolic, regular). This corresponds to the
 special `-st-icon-style` CSS property.</doc>
         <source-position filename="src/st/st-theme-node.h" line="287"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2729">the icon style for @node</doc>
+               line="2728">the icon style for @node</doc>
           <type name="IconStyle" c:type="StIconStyle"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2724">a #StThemeNode</doc>
+                 line="2723">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9730,7 +9893,7 @@ special `-st-icon-style` CSS property.</doc>
       <method name="get_length" c:identifier="st_theme_node_get_length">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="1491">Generically looks up a property containing a single length value. When
+             line="1490">Generically looks up a property containing a single length value. When
 specific getters (like st_theme_node_get_border_width()) exist, they
 should be used instead. They are cached, so more efficient, and have
 handling for shortcut properties and other details of CSS.
@@ -9745,20 +9908,20 @@ returned value is in physical pixels, as opposed to logical pixels.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="1508">the length, in pixels, or 0 if the property was not found.</doc>
+               line="1507">the length, in pixels, or 0 if the property was not found.</doc>
           <type name="gdouble" c:type="gdouble"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1493">a #StThemeNode</doc>
+                 line="1492">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1494">The name of the length property</doc>
+                 line="1493">The name of the length property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
         </parameters>
@@ -9767,12 +9930,12 @@ returned value is in physical pixels, as opposed to logical pixels.</doc>
               c:identifier="st_theme_node_get_letter_spacing">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2912">Gets the value for the letter-spacing style property, in physical pixels.</doc>
+             line="2911">Gets the value for the letter-spacing style property, in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="293"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2918">the value of the letter-spacing property, if
+               line="2917">the value of the letter-spacing property, if
   found, or zero if such property has not been found.</doc>
           <type name="gdouble" c:type="double"/>
         </return-value>
@@ -9780,7 +9943,7 @@ returned value is in physical pixels, as opposed to logical pixels.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2914">a #StThemeNode</doc>
+                 line="2913">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9788,26 +9951,26 @@ returned value is in physical pixels, as opposed to logical pixels.</doc>
       <method name="get_margin" c:identifier="st_theme_node_get_margin">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2668">Get the margin for @node on @side, in physical pixels. This corresponds to
+             line="2667">Get the margin for @node on @side, in physical pixels. This corresponds to
 the CSS properties such as `margin-top`.</doc>
         <source-position filename="src/st/st-theme-node.h" line="275"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2676">the margin size in physical pixels</doc>
+               line="2675">the margin size in physical pixels</doc>
           <type name="gdouble" c:type="double"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2670">a #StThemeNode</doc>
+                 line="2669">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="side" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2671">a #StSide</doc>
+                 line="2670">a #StSide</doc>
             <type name="Side" c:type="StSide"/>
           </parameter>
         </parameters>
@@ -9816,19 +9979,19 @@ the CSS properties such as `margin-top`.</doc>
               c:identifier="st_theme_node_get_max_height">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2272">Get the maximum height for @node, in physical pixels.</doc>
+             line="2271">Get the maximum height for @node, in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="283"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2278">the maximum height in physical pixels</doc>
+               line="2277">the maximum height in physical pixels</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2274">a #StThemeNode</doc>
+                 line="2273">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9836,19 +9999,19 @@ the CSS properties such as `margin-top`.</doc>
       <method name="get_max_width" c:identifier="st_theme_node_get_max_width">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2255">Get the maximum width for @node, in physical pixels.</doc>
+             line="2254">Get the maximum width for @node, in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="282"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2261">the maximum width in physical pixels</doc>
+               line="2260">the maximum width in physical pixels</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2257">a #StThemeNode</doc>
+                 line="2256">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9857,19 +10020,19 @@ the CSS properties such as `margin-top`.</doc>
               c:identifier="st_theme_node_get_min_height">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2238">Get the minimum height for @node, in physical pixels.</doc>
+             line="2237">Get the minimum height for @node, in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="281"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2244">the minimum height in physical pixels</doc>
+               line="2243">the minimum height in physical pixels</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2240">a #StThemeNode</doc>
+                 line="2239">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9877,19 +10040,19 @@ the CSS properties such as `margin-top`.</doc>
       <method name="get_min_width" c:identifier="st_theme_node_get_min_width">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2221">Get the minimum width for @node, in physical pixels.</doc>
+             line="2220">Get the minimum width for @node, in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="280"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2227">the minimum width in physical pixels</doc>
+               line="2226">the minimum width in physical pixels</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2223">a #StThemeNode</doc>
+                 line="2222">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9898,7 +10061,7 @@ the CSS properties such as `margin-top`.</doc>
               c:identifier="st_theme_node_get_outline_color">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2169">Gets the color of @node's outline.</doc>
+             line="2168">Gets the color of @node's outline.</doc>
         <source-position filename="src/st/st-theme-node.h" line="266"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -9907,7 +10070,7 @@ the CSS properties such as `margin-top`.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2171">a #StThemeNode</doc>
+                 line="2170">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="color"
@@ -9916,7 +10079,7 @@ the CSS properties such as `margin-top`.</doc>
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2172">location to store the color</doc>
+                 line="2171">location to store the color</doc>
             <type name="Cogl.Color" c:type="CoglColor*"/>
           </parameter>
         </parameters>
@@ -9925,19 +10088,19 @@ the CSS properties such as `margin-top`.</doc>
               c:identifier="st_theme_node_get_outline_width">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2151">Get the width of the outline for @node, in physical pixels.</doc>
+             line="2150">Get the width of the outline for @node, in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="265"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2157">the width in physical pixels</doc>
+               line="2156">the width in physical pixels</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2153">a #StThemeNode</doc>
+                 line="2152">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -9945,26 +10108,26 @@ the CSS properties such as `margin-top`.</doc>
       <method name="get_padding" c:identifier="st_theme_node_get_padding">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2646">Get the padding for @node on @side, in physical pixels. This corresponds to
+             line="2645">Get the padding for @node on @side, in physical pixels. This corresponds to
 the CSS properties such as `padding-top`.</doc>
         <source-position filename="src/st/st-theme-node.h" line="269"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2654">the padding size in physical pixels</doc>
+               line="2653">the padding size in physical pixels</doc>
           <type name="gdouble" c:type="double"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2648">a #StThemeNode</doc>
+                 line="2647">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="side" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2649">a #StSide</doc>
+                 line="2648">a #StSide</doc>
             <type name="Side" c:type="StSide"/>
           </parameter>
         </parameters>
@@ -9972,7 +10135,7 @@ the CSS properties such as `padding-top`.</doc>
       <method name="get_paint_box" c:identifier="st_theme_node_get_paint_box">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4351">Gets the box used to paint the actor, including the area occupied
+             line="4350">Gets the box used to paint the actor, including the area occupied
 by properties which paint outside the actor's assigned allocation.
 When painting @node to an offscreen buffer, this function can be
 used to determine the necessary size of the buffer.</doc>
@@ -9984,13 +10147,13 @@ used to determine the necessary size of the buffer.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4353">a #StThemeNode</doc>
+                 line="4352">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="allocation" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4354">the box allocated to a #ClutterActor</doc>
+                 line="4353">the box allocated to a #ClutterActor</doc>
             <type name="Clutter.ActorBox" c:type="const ClutterActorBox*"/>
           </parameter>
           <parameter name="paint_box"
@@ -9999,7 +10162,7 @@ used to determine the necessary size of the buffer.</doc>
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4355">computed box occupied when painting the actor</doc>
+                 line="4354">computed box occupied when painting the actor</doc>
             <type name="Clutter.ActorBox" c:type="ClutterActorBox*"/>
           </parameter>
         </parameters>
@@ -10007,12 +10170,12 @@ used to determine the necessary size of the buffer.</doc>
       <method name="get_parent" c:identifier="st_theme_node_get_parent">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="225">Gets the parent themed element node.</doc>
+             line="224">Gets the parent themed element node.</doc>
         <source-position filename="src/st/st-theme-node.h" line="189"/>
         <return-value transfer-ownership="none" nullable="1">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="231">the parent #StThemeNode, or %NULL if
+               line="230">the parent #StThemeNode, or %NULL if
  this is the root node of the tree of theme elements.</doc>
           <type name="ThemeNode" c:type="StThemeNode*"/>
         </return-value>
@@ -10020,7 +10183,7 @@ used to determine the necessary size of the buffer.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="227">a #StThemeNode</doc>
+                 line="226">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10029,12 +10192,12 @@ used to determine the necessary size of the buffer.</doc>
               c:identifier="st_theme_node_get_pseudo_classes">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="306">Get the list of pseudo-classes for @node (eg. `:focused`).</doc>
+             line="305">Get the list of pseudo-classes for @node (eg. `:focused`).</doc>
         <source-position filename="src/st/st-theme-node.h" line="199"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="312">the element's pseudo-classes</doc>
+               line="311">the element's pseudo-classes</doc>
           <array c:type="GStrv">
             <type name="utf8"/>
           </array>
@@ -10043,7 +10206,7 @@ used to determine the necessary size of the buffer.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="308">a #StThemeNode</doc>
+                 line="307">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10051,7 +10214,7 @@ used to determine the necessary size of the buffer.</doc>
       <method name="get_shadow" c:identifier="st_theme_node_get_shadow">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="3846">Generically looks up a property containing a set of shadow values. When
+             line="3845">Generically looks up a property containing a set of shadow values. When
 specific getters (like st_theme_node_get_box_shadow()) exist, they
 should be used instead. They are cached, so more efficient, and have
 handling for shortcut properties and other details of CSS.
@@ -10064,7 +10227,7 @@ See also st_theme_node_lookup_shadow (), which provides more options.</doc>
         <return-value transfer-ownership="full" nullable="1">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="3861">the shadow, or %NULL if the property was
+               line="3860">the shadow, or %NULL if the property was
   not found.</doc>
           <type name="Shadow" c:type="StShadow*"/>
         </return-value>
@@ -10072,13 +10235,13 @@ See also st_theme_node_lookup_shadow (), which provides more options.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3848">a #StThemeNode</doc>
+                 line="3847">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3849">The name of the shadow property</doc>
+                 line="3848">The name of the shadow property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
         </parameters>
@@ -10087,19 +10250,19 @@ See also st_theme_node_lookup_shadow (), which provides more options.</doc>
               c:identifier="st_theme_node_get_text_align">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2852">Get the text alignment of @node.</doc>
+             line="2851">Get the text alignment of @node.</doc>
         <source-position filename="src/st/st-theme-node.h" line="291"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2858">the alignment of text for @node</doc>
+               line="2857">the alignment of text for @node</doc>
           <type name="TextAlign" c:type="StTextAlign"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2854">a #StThemeNode</doc>
+                 line="2853">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10108,19 +10271,19 @@ See also st_theme_node_lookup_shadow (), which provides more options.</doc>
               c:identifier="st_theme_node_get_text_decoration">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2775">Get the text decoration for @node (eg. underline, line-through, etc).</doc>
+             line="2774">Get the text decoration for @node (eg. underline, line-through, etc).</doc>
         <source-position filename="src/st/st-theme-node.h" line="289"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2781">the text decoration for @node</doc>
+               line="2780">the text decoration for @node</doc>
           <type name="TextDecoration" c:type="StTextDecoration"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2777">a #StThemeNode</doc>
+                 line="2776">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10129,12 +10292,12 @@ See also st_theme_node_lookup_shadow (), which provides more options.</doc>
               c:identifier="st_theme_node_get_text_shadow">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="3954">Gets the value for the text-shadow style property</doc>
+             line="3953">Gets the value for the text-shadow style property</doc>
         <source-position filename="src/st/st-theme-node.h" line="306"/>
         <return-value transfer-ownership="none" nullable="1">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="3960">the node's text-shadow, or %NULL
+               line="3959">the node's text-shadow, or %NULL
   if node has no text-shadow</doc>
           <type name="Shadow" c:type="StShadow*"/>
         </return-value>
@@ -10142,7 +10305,7 @@ See also st_theme_node_lookup_shadow (), which provides more options.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3956">a #StThemeNode</doc>
+                 line="3955">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10150,19 +10313,19 @@ See also st_theme_node_lookup_shadow (), which provides more options.</doc>
       <method name="get_theme" c:identifier="st_theme_node_get_theme">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="242">Gets the theme stylesheet set that styles this node</doc>
+             line="241">Gets the theme stylesheet set that styles this node</doc>
         <source-position filename="src/st/st-theme-node.h" line="191"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="248">the theme stylesheet set</doc>
+               line="247">the theme stylesheet set</doc>
           <type name="Theme" c:type="StTheme*"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="244">a #StThemeNode</doc>
+                 line="243">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10171,21 +10334,21 @@ See also st_theme_node_lookup_shadow (), which provides more options.</doc>
               c:identifier="st_theme_node_get_transition_duration">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2690">Get the value of the transition-duration property, which
+             line="2689">Get the value of the transition-duration property, which
 specifies the transition time between the previous #StThemeNode
 and @node.</doc>
         <source-position filename="src/st/st-theme-node.h" line="285"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2698">the node's transition duration in milliseconds</doc>
+               line="2697">the node's transition duration in milliseconds</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2692">an #StThemeNode</doc>
+                 line="2691">an #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10193,7 +10356,7 @@ and @node.</doc>
       <method name="get_url" c:identifier="st_theme_node_get_url">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="1212">Looks up a property containing a single URL value.
+             line="1211">Looks up a property containing a single URL value.
 
 See also st_theme_node_lookup_url(), which provides more options,
 and lets you handle the case where the theme does not specify the
@@ -10202,7 +10365,7 @@ indicated value.</doc>
         <return-value transfer-ownership="full" nullable="1">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="1223">the newly allocated value if found.
+               line="1222">the newly allocated value if found.
  If @property_name is not found, a warning will be logged and %NULL
  will be returned.</doc>
           <type name="Gio.File" c:type="GFile*"/>
@@ -10211,13 +10374,13 @@ indicated value.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1214">a #StThemeNode</doc>
+                 line="1213">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1215">The name of the string property</doc>
+                 line="1214">The name of the string property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
         </parameters>
@@ -10226,19 +10389,19 @@ indicated value.</doc>
               c:identifier="st_theme_node_get_vertical_padding">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="3601">Gets the total vertical padding (top + bottom padding), in physical pixels.</doc>
+             line="3600">Gets the total vertical padding (top + bottom padding), in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="273"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="3607">the total vertical padding in physical pixels</doc>
+               line="3606">the total vertical padding in physical pixels</doc>
           <type name="gdouble" c:type="double"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3603">a #StThemeNode</doc>
+                 line="3602">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10246,19 +10409,19 @@ indicated value.</doc>
       <method name="get_width" c:identifier="st_theme_node_get_width">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="2187">Get the width for @node, in physical pixels.</doc>
+             line="2186">Get the width for @node, in physical pixels.</doc>
         <source-position filename="src/st/st-theme-node.h" line="278"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="2193">the width in physical pixels</doc>
+               line="2192">the width in physical pixels</doc>
           <type name="gint" c:type="int"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="2189">a #StThemeNode</doc>
+                 line="2188">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10266,19 +10429,19 @@ indicated value.</doc>
       <method name="hash" c:identifier="st_theme_node_hash">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="399">Converts @node to a hash value.</doc>
+             line="398">Converts @node to a hash value.</doc>
         <source-position filename="src/st/st-theme-node.h" line="194"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="405">a hash value corresponding to @node</doc>
+               line="404">a hash value corresponding to @node</doc>
           <type name="guint" c:type="guint"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="401">a #StThemeNode</doc>
+                 line="400">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10310,7 +10473,7 @@ indicated value.</doc>
       <method name="lookup_color" c:identifier="st_theme_node_lookup_color">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="900">Generically looks up a property containing a single color value. When
+             line="899">Generically looks up a property containing a single color value. When
 specific getters (like st_theme_node_get_background_color()) exist, they
 should be used instead. They are cached, so more efficient, and have
 handling for shortcut properties and other details of CSS.
@@ -10320,7 +10483,7 @@ See also st_theme_node_get_color(), which provides a simpler API.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="920">%TRUE if the property was found in the properties for this
+               line="919">%TRUE if the property was found in the properties for this
  theme node (or in the properties of parent nodes when inheriting.)</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
@@ -10328,19 +10491,19 @@ See also st_theme_node_get_color(), which provides a simpler API.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="902">a #StThemeNode</doc>
+                 line="901">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="903">The name of the color property</doc>
+                 line="902">The name of the color property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
           <parameter name="inherit" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="904">if %TRUE, if a value is not found for the property on the
+                 line="903">if %TRUE, if a value is not found for the property on the
   node, then it will be looked up on the parent node, and then on the
   parent's parent, and so forth. Note that if the property has a
   value of 'inherit' it will be inherited even if %FALSE is passed
@@ -10353,7 +10516,7 @@ See also st_theme_node_get_color(), which provides a simpler API.</doc>
                      transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="909">location to store the color that was
+                 line="908">location to store the color that was
   determined. If the property is not found, the value in this location
   will not be changed.</doc>
             <type name="Cogl.Color" c:type="CoglColor*"/>
@@ -10363,7 +10526,7 @@ See also st_theme_node_get_color(), which provides a simpler API.</doc>
       <method name="lookup_double" c:identifier="st_theme_node_lookup_double">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="995">Generically looks up a property containing a single numeric value
+             line="994">Generically looks up a property containing a single numeric value
  without units.
 
 See also st_theme_node_get_double(), which provides a simpler API.</doc>
@@ -10371,7 +10534,7 @@ See also st_theme_node_get_double(), which provides a simpler API.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="1013">%TRUE if the property was found in the properties for this
+               line="1012">%TRUE if the property was found in the properties for this
  theme node (or in the properties of parent nodes when inheriting.)</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
@@ -10379,19 +10542,19 @@ See also st_theme_node_get_double(), which provides a simpler API.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="997">a #StThemeNode</doc>
+                 line="996">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="998">The name of the numeric property</doc>
+                 line="997">The name of the numeric property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
           <parameter name="inherit" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="999">if %TRUE, if a value is not found for the property on the
+                 line="998">if %TRUE, if a value is not found for the property on the
   node, then it will be looked up on the parent node, and then on the
   parent's parent, and so forth. Note that if the property has a
   value of 'inherit' it will be inherited even if %FALSE is passed
@@ -10404,7 +10567,7 @@ See also st_theme_node_get_double(), which provides a simpler API.</doc>
                      transfer-ownership="full">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1004">location to store the value that was determined.
+                 line="1003">location to store the value that was determined.
   If the property is not found, the value in this location
   will not be changed.</doc>
             <type name="gdouble" c:type="double*"/>
@@ -10414,7 +10577,7 @@ See also st_theme_node_get_double(), which provides a simpler API.</doc>
       <method name="lookup_length" c:identifier="st_theme_node_lookup_length">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="1443">Generically looks up a property containing a single length value. When
+             line="1442">Generically looks up a property containing a single length value. When
 specific getters (like st_theme_node_get_border_width()) exist, they
 should be used instead. They are cached, so more efficient, and have
 handling for shortcut properties and other details of CSS.
@@ -10424,7 +10587,7 @@ See also st_theme_node_get_length(), which provides a simpler API.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="1464">%TRUE if the property was found in the properties for this
+               line="1463">%TRUE if the property was found in the properties for this
  theme node (or in the properties of parent nodes when inheriting.)</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
@@ -10432,19 +10595,19 @@ See also st_theme_node_get_length(), which provides a simpler API.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1445">a #StThemeNode</doc>
+                 line="1444">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1446">The name of the length property</doc>
+                 line="1445">The name of the length property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
           <parameter name="inherit" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1447">if %TRUE, if a value is not found for the property on the
+                 line="1446">if %TRUE, if a value is not found for the property on the
   node, then it will be looked up on the parent node, and then on the
   parent's parent, and so forth. Note that if the property has a
   value of 'inherit' it will be inherited even if %FALSE is passed
@@ -10457,7 +10620,7 @@ See also st_theme_node_get_length(), which provides a simpler API.</doc>
                      transfer-ownership="full">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1452">location to store the length that was determined.
+                 line="1451">location to store the length that was determined.
   If the property is not found, the value in this location
   will not be changed. The returned length is resolved
   to pixels.</doc>
@@ -10468,7 +10631,7 @@ See also st_theme_node_get_length(), which provides a simpler API.</doc>
       <method name="lookup_shadow" c:identifier="st_theme_node_lookup_shadow">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="3752">If the property is not found, the value in the shadow variable will not
+             line="3751">If the property is not found, the value in the shadow variable will not
 be changed.
 
 Generically looks up a property containing a set of shadow values. When
@@ -10481,7 +10644,7 @@ See also st_theme_node_get_shadow(), which provides a simpler API.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="3773">%TRUE if the property was found in the properties for this
+               line="3772">%TRUE if the property was found in the properties for this
   theme node (or in the properties of parent nodes when inheriting.), %FALSE
   if the property was not found, or was explicitly set to 'none'.</doc>
           <type name="gboolean" c:type="gboolean"/>
@@ -10490,19 +10653,19 @@ See also st_theme_node_get_shadow(), which provides a simpler API.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3754">a #StThemeNode</doc>
+                 line="3753">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3755">The name of the shadow property</doc>
+                 line="3754">The name of the shadow property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
           <parameter name="inherit" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3756">if %TRUE, if a value is not found for the property on the
+                 line="3755">if %TRUE, if a value is not found for the property on the
   node, then it will be looked up on the parent node, and then on the
   parent's parent, and so forth. Note that if the property has a
   value of 'inherit' it will be inherited even if %FALSE is passed
@@ -10515,7 +10678,7 @@ See also st_theme_node_get_shadow(), which provides a simpler API.</doc>
                      transfer-ownership="full">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="3761">location to store the shadow</doc>
+                 line="3760">location to store the shadow</doc>
             <type name="Shadow" c:type="StShadow**"/>
           </parameter>
         </parameters>
@@ -10523,13 +10686,13 @@ See also st_theme_node_get_shadow(), which provides a simpler API.</doc>
       <method name="lookup_time" c:identifier="st_theme_node_lookup_time">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="1053">Generically looks up a property containing a single time value,
+             line="1052">Generically looks up a property containing a single time value,
  which is converted to milliseconds.</doc>
         <source-position filename="src/st/st-theme-node.h" line="218"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="1069">%TRUE if the property was found in the properties for this
+               line="1068">%TRUE if the property was found in the properties for this
  theme node (or in the properties of parent nodes when inheriting.)</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
@@ -10537,19 +10700,19 @@ See also st_theme_node_get_shadow(), which provides a simpler API.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1055">a #StThemeNode</doc>
+                 line="1054">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1056">The name of the time property</doc>
+                 line="1055">The name of the time property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
           <parameter name="inherit" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1057">if %TRUE, if a value is not found for the property on the
+                 line="1056">if %TRUE, if a value is not found for the property on the
   node, then it will be looked up on the parent node, and then on the
   parent's parent, and so forth. Note that if the property has a
   value of 'inherit' it will be inherited even if %FALSE is passed
@@ -10562,7 +10725,7 @@ See also st_theme_node_get_shadow(), which provides a simpler API.</doc>
                      transfer-ownership="full">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1062">location to store the value that was determined.
+                 line="1061">location to store the value that was determined.
   If the property is not found, the value in this location
   will not be changed.</doc>
             <type name="gdouble" c:type="gdouble*"/>
@@ -10572,14 +10735,14 @@ See also st_theme_node_get_shadow(), which provides a simpler API.</doc>
       <method name="lookup_url" c:identifier="st_theme_node_lookup_url">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="1147">Looks up a property containing a single URL value.
+             line="1146">Looks up a property containing a single URL value.
 
 See also st_theme_node_get_url(), which provides a simpler API.</doc>
         <source-position filename="src/st/st-theme-node.h" line="226"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="1164">%TRUE if the property was found in the properties for this
+               line="1163">%TRUE if the property was found in the properties for this
  theme node (or in the properties of parent nodes when inheriting.)</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
@@ -10587,19 +10750,19 @@ See also st_theme_node_get_url(), which provides a simpler API.</doc>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1149">a #StThemeNode</doc>
+                 line="1148">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="property_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1150">The name of the string property</doc>
+                 line="1149">The name of the string property</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
           <parameter name="inherit" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1151">if %TRUE, if a value is not found for the property on the
+                 line="1150">if %TRUE, if a value is not found for the property on the
   node, then it will be looked up on the parent node, and then on the
   parent's parent, and so forth. Note that if the property has a
   value of 'inherit' it will be inherited even if %FALSE is passed
@@ -10612,7 +10775,7 @@ See also st_theme_node_get_url(), which provides a simpler API.</doc>
                      transfer-ownership="full">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="1156">location to store the newly allocated value that was
+                 line="1155">location to store the newly allocated value that was
   determined. If the property is not found, the value in this location
   will not be changed.</doc>
             <type name="Gio.File" c:type="GFile**"/>
@@ -10656,14 +10819,14 @@ See also st_theme_node_get_url(), which provides a simpler API.</doc>
       <method name="paint_equal" c:identifier="st_theme_node_paint_equal">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4447">Check if st_theme_node_paint() will paint identically for @node as it does
+             line="4446">Check if st_theme_node_paint() will paint identically for @node as it does
 for @other. Note that in some cases this function may return %TRUE even
 if there is no visible difference in the painting.</doc>
         <source-position filename="src/st/st-theme-node.h" line="339"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="4456">%TRUE if the two theme nodes paint identically. %FALSE if the
+               line="4455">%TRUE if the two theme nodes paint identically. %FALSE if the
   two nodes potentially paint differently.</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
@@ -10674,7 +10837,7 @@ if there is no visible difference in the painting.</doc>
                               allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4449">a #StThemeNode</doc>
+                 line="4448">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
           <parameter name="other"
@@ -10683,7 +10846,7 @@ if there is no visible difference in the painting.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4450">a different #StThemeNode</doc>
+                 line="4449">a different #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </parameter>
         </parameters>
@@ -10691,20 +10854,20 @@ if there is no visible difference in the painting.</doc>
       <method name="to_string" c:identifier="st_theme_node_to_string">
         <doc xml:space="preserve"
              filename="src/st/st-theme-node.c"
-             line="4545">Serialize @node to a string of its #GType name, CSS ID, classes and
+             line="4544">Serialize @node to a string of its #GType name, CSS ID, classes and
 pseudo-classes.</doc>
         <source-position filename="src/st/st-theme-node.h" line="357"/>
         <return-value transfer-ownership="full">
           <doc xml:space="preserve"
                filename="src/st/st-theme-node.c"
-               line="4552">the serialized theme node</doc>
+               line="4551">the serialized theme node</doc>
           <type name="utf8" c:type="gchar*"/>
         </return-value>
         <parameters>
           <instance-parameter name="node" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-theme-node.c"
-                 line="4547">a #StThemeNode</doc>
+                 line="4546">a #StThemeNode</doc>
             <type name="ThemeNode" c:type="StThemeNode*"/>
           </instance-parameter>
         </parameters>
@@ -10905,7 +11068,7 @@ The #StViewport is a generic #StScrollable implementation.</doc>
            glib:type-struct="WidgetClass">
       <doc xml:space="preserve"
            filename="src/st/st-widget.c"
-           line="87">Base class for stylable actors
+           line="89">Base class for stylable actors
 
 #StWidget is a simple abstract class on top of #ClutterActor. It
 provides basic theming properties.
@@ -10918,14 +11081,14 @@ to obey to a certain #StStyle.</doc>
       <virtual-method name="get_focus_chain" invoker="get_focus_chain">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="2564">Gets a list of the focusable children of @widget, in "Tab"
+             line="2578">Gets a list of the focusable children of @widget, in "Tab"
 order. By default, this returns all visible
 (as in [method@Clutter.Actor.is_visible]) children of @widget.</doc>
         <source-position filename="src/st/st-widget.h" line="88"/>
         <return-value transfer-ownership="container">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="2572">
+               line="2586">
   @widget's focusable children</doc>
           <type name="GLib.List" c:type="GList*">
             <type name="Clutter.Actor"/>
@@ -10935,7 +11098,7 @@ order. By default, this returns all visible
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="2566">An #StWidget</doc>
+                 line="2580">An #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -10972,7 +11135,7 @@ order. By default, this returns all visible
       <virtual-method name="popup_menu" invoker="popup_menu">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1928">Asks the widget to pop-up a context menu by emitting #StWidget::popup-menu.</doc>
+             line="1942">Asks the widget to pop-up a context menu by emitting #StWidget::popup-menu.</doc>
         <source-position filename="src/st/st-widget.h" line="75"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -10981,7 +11144,7 @@ order. By default, this returns all visible
           <instance-parameter name="self" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1930">A #StWidget</doc>
+                 line="1944">A #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11001,7 +11164,7 @@ order. By default, this returns all visible
               c:identifier="st_widget_add_style_class_name">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1125">Adds @style_class to @actor's style class name list, if it is not
+             line="1150">Adds @style_class to @actor's style class name list, if it is not
 already present.</doc>
         <source-position filename="src/st/st-widget.h" line="103"/>
         <return-value transfer-ownership="none">
@@ -11011,13 +11174,13 @@ already present.</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1127">a #StWidget</doc>
+                 line="1152">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="style_class" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1128">a style class name string</doc>
+                 line="1153">a style class name string</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -11026,7 +11189,7 @@ already present.</doc>
               c:identifier="st_widget_add_style_pseudo_class">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1295">Adds @pseudo_class to @actor's pseudo class list, if it is not
+             line="1320">Adds @pseudo_class to @actor's pseudo class list, if it is not
 already present.</doc>
         <source-position filename="src/st/st-widget.h" line="93"/>
         <return-value transfer-ownership="none">
@@ -11036,13 +11199,13 @@ already present.</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1297">a #StWidget</doc>
+                 line="1322">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="pseudo_class" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1298">a pseudo class string</doc>
+                 line="1323">a pseudo class string</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -11050,7 +11213,7 @@ already present.</doc>
       <method name="ensure_style" c:identifier="st_widget_ensure_style">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1715">Ensures that @widget has read its style information and propagated any
+             line="1743">Ensures that @widget has read its style information and propagated any
 changes to its children.</doc>
         <source-position filename="src/st/st-widget.h" line="123"/>
         <return-value transfer-ownership="none">
@@ -11060,7 +11223,7 @@ changes to its children.</doc>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1717">A #StWidget</doc>
+                 line="1745">A #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11070,20 +11233,20 @@ changes to its children.</doc>
               glib:get-property="can-focus">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1911">Returns the current value of the can-focus property. See
+             line="1925">Returns the current value of the can-focus property. See
 st_widget_set_can_focus() for more information.</doc>
         <source-position filename="src/st/st-widget.h" line="127"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="1918">current value of can-focus on @widget</doc>
+               line="1932">current value of can-focus on @widget</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1913">A #StWidget</doc>
+                 line="1927">A #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11091,14 +11254,14 @@ st_widget_set_can_focus() for more information.</doc>
       <method name="get_focus_chain" c:identifier="st_widget_get_focus_chain">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="2564">Gets a list of the focusable children of @widget, in "Tab"
+             line="2578">Gets a list of the focusable children of @widget, in "Tab"
 order. By default, this returns all visible
 (as in [method@Clutter.Actor.is_visible]) children of @widget.</doc>
         <source-position filename="src/st/st-widget.h" line="142"/>
         <return-value transfer-ownership="container">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="2572">
+               line="2586">
   @widget's focusable children</doc>
           <type name="GLib.List" c:type="GList*">
             <type name="Clutter.Actor"/>
@@ -11108,7 +11271,7 @@ order. By default, this returns all visible
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="2566">An #StWidget</doc>
+                 line="2580">An #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11118,20 +11281,20 @@ order. By default, this returns all visible
               glib:get-property="hover">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1861">If #StWidget:track-hover is set, this returns whether the pointer
+             line="1875">If #StWidget:track-hover is set, this returns whether the pointer
 is currently over the widget.</doc>
         <source-position filename="src/st/st-widget.h" line="120"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="1868">current value of hover on @widget</doc>
+               line="1882">current value of hover on @widget</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1863">A #StWidget</doc>
+                 line="1877">A #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11141,19 +11304,19 @@ is currently over the widget.</doc>
               glib:get-property="label-actor">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="2334">Gets the label that identifies @widget if it is defined</doc>
+             line="2348">Gets the label that identifies @widget if it is defined</doc>
         <source-position filename="src/st/st-widget.h" line="133"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="2340">the label that identifies the widget</doc>
+               line="2354">the label that identifies the widget</doc>
           <type name="Clutter.Actor" c:type="ClutterActor*"/>
         </return-value>
         <parameters>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="2336">a #StWidget</doc>
+                 line="2350">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11163,12 +11326,12 @@ is currently over the widget.</doc>
               glib:get-property="style">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1380">Get the current inline style string. See st_widget_set_style().</doc>
+             line="1405">Get the current inline style string. See st_widget_set_style().</doc>
         <source-position filename="src/st/st-widget.h" line="113"/>
         <return-value transfer-ownership="none" nullable="1">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="1386">The inline style string, or %NULL. The
+               line="1411">The inline style string, or %NULL. The
   string is owned by the #StWidget and should not be modified or freed.</doc>
           <type name="utf8" c:type="const gchar*"/>
         </return-value>
@@ -11176,7 +11339,7 @@ is currently over the widget.</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1382">a #StWidget</doc>
+                 line="1407">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11186,12 +11349,12 @@ is currently over the widget.</doc>
               glib:get-property="style-class">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1179">Get the current style class name</doc>
+             line="1204">Get the current style class name</doc>
         <source-position filename="src/st/st-widget.h" line="107"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="1185">the class name string. The string is owned by the #StWidget and
+               line="1210">the class name string. The string is owned by the #StWidget and
 should not be modified or freed.</doc>
           <type name="utf8" c:type="const gchar*"/>
         </return-value>
@@ -11199,7 +11362,7 @@ should not be modified or freed.</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1181">a #StWidget</doc>
+                 line="1206">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11209,7 +11372,7 @@ should not be modified or freed.</doc>
               glib:get-property="pseudo-class">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1221">Get the current style pseudo class list.
+             line="1246">Get the current style pseudo class list.
 
 Note that an actor can have multiple pseudo classes; if you just
 want to test for the presence of a specific pseudo class, use
@@ -11218,7 +11381,7 @@ st_widget_has_style_pseudo_class().</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="1231">the pseudo class list string. The string is owned by the
+               line="1256">the pseudo class list string. The string is owned by the
 #StWidget and should not be modified or freed.</doc>
           <type name="utf8" c:type="const gchar*"/>
         </return-value>
@@ -11226,7 +11389,7 @@ st_widget_has_style_pseudo_class().</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1223">a #StWidget</doc>
+                 line="1248">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11234,7 +11397,7 @@ st_widget_has_style_pseudo_class().</doc>
       <method name="get_theme_node" c:identifier="st_widget_get_theme_node">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="554">Gets the theme node holding style information for the widget.
+             line="575">Gets the theme node holding style information for the widget.
 The theme node is used to access standard and custom CSS
 properties of the widget.
 
@@ -11244,7 +11407,7 @@ Note: it is a fatal error to call this on a widget that is
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="565">the theme node for the widget.
+               line="586">the theme node for the widget.
   This is owned by the widget. When attributes of the widget
   or the environment that affect the styling change (for example
   the style_class property of the widget), it will be recreated,
@@ -11255,7 +11418,7 @@ Note: it is a fatal error to call this on a widget that is
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="556">a #StWidget</doc>
+                 line="577">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11265,20 +11428,20 @@ Note: it is a fatal error to call this on a widget that is
               glib:get-property="track-hover">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1778">Returns the current value of the #StWidget:track-hover property. See
+             line="1806">Returns the current value of the #StWidget:track-hover property. See
 st_widget_set_track_hover() for more information.</doc>
         <source-position filename="src/st/st-widget.h" line="116"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="1785">current value of track-hover on @widget</doc>
+               line="1813">current value of track-hover on @widget</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1780">A #StWidget</doc>
+                 line="1808">A #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11287,12 +11450,12 @@ st_widget_set_track_hover() for more information.</doc>
               c:identifier="st_widget_has_style_class_name">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1196">Tests if @actor's style class list includes @style_class.</doc>
+             line="1221">Tests if @actor's style class list includes @style_class.</doc>
         <source-position filename="src/st/st-widget.h" line="108"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="1203">whether or not @actor's style class list includes
+               line="1228">whether or not @actor's style class list includes
 @style_class.</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
@@ -11300,13 +11463,13 @@ st_widget_set_track_hover() for more information.</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1198">a #StWidget</doc>
+                 line="1223">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="style_class" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1199">a style class string</doc>
+                 line="1224">a style class string</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -11315,12 +11478,12 @@ st_widget_set_track_hover() for more information.</doc>
               c:identifier="st_widget_has_style_pseudo_class">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1242">Tests if @actor's pseudo class list includes @pseudo_class.</doc>
+             line="1267">Tests if @actor's pseudo class list includes @pseudo_class.</doc>
         <source-position filename="src/st/st-widget.h" line="98"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="1249">whether or not @actor's pseudo class list includes
+               line="1274">whether or not @actor's pseudo class list includes
 @pseudo_class.</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
@@ -11328,13 +11491,13 @@ st_widget_set_track_hover() for more information.</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1244">a #StWidget</doc>
+                 line="1269">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="pseudo_class" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1245">a pseudo class string</doc>
+                 line="1270">a pseudo class string</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -11342,7 +11505,7 @@ st_widget_set_track_hover() for more information.</doc>
       <method name="navigate_focus" c:identifier="st_widget_navigate_focus">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="2185">Tries to update the keyboard focus within @widget in response to a
+             line="2199">Tries to update the keyboard focus within @widget in response to a
 keyboard event.
 
 If @from is a descendant of @widget, this attempts to move the
@@ -11372,7 +11535,7 @@ to the first available widget in the given direction.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="2219">%TRUE if clutter_actor_grab_key_focus() has been
+               line="2233">%TRUE if clutter_actor_grab_key_focus() has been
 called on an actor. %FALSE if not.</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
@@ -11380,7 +11543,7 @@ called on an actor. %FALSE if not.</doc>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="2187">the "top level" container</doc>
+                 line="2201">the "top level" container</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="from"
@@ -11389,19 +11552,19 @@ called on an actor. %FALSE if not.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="2188">the actor that the focus is coming from</doc>
+                 line="2202">the actor that the focus is coming from</doc>
             <type name="Clutter.Actor" c:type="ClutterActor*"/>
           </parameter>
           <parameter name="direction" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="2189">the direction focus is moving in</doc>
+                 line="2203">the direction focus is moving in</doc>
             <type name="DirectionType" c:type="StDirectionType"/>
           </parameter>
           <parameter name="wrap_around" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="2190">whether focus should wrap around</doc>
+                 line="2204">whether focus should wrap around</doc>
             <type name="gboolean" c:type="gboolean"/>
           </parameter>
         </parameters>
@@ -11410,7 +11573,7 @@ called on an actor. %FALSE if not.</doc>
               c:identifier="st_widget_paint_background">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="386">Paint the background of the widget. This is meant to be called by
+             line="395">Paint the background of the widget. This is meant to be called by
 subclasses of StWidget that need to paint the background without
 painting children.</doc>
         <source-position filename="src/st/st-widget.h" line="143"/>
@@ -11421,7 +11584,7 @@ painting children.</doc>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="388">The #StWidget</doc>
+                 line="397">The #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="node" transfer-ownership="none">
@@ -11435,7 +11598,7 @@ painting children.</doc>
       <method name="peek_theme_node" c:identifier="st_widget_peek_theme_node">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="647">Returns the theme node for the widget if it has already been
+             line="668">Returns the theme node for the widget if it has already been
 computed, %NULL if the widget hasn't been added to a  stage or the theme
 node hasn't been computed. If %NULL is returned, then ::style-changed
 will be reliably emitted before the widget is allocated or painted.</doc>
@@ -11443,7 +11606,7 @@ will be reliably emitted before the widget is allocated or painted.</doc>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="656">the theme node for the widget.
+               line="677">the theme node for the widget.
   This is owned by the widget. When attributes of the widget
   or the environment that affect the styling change (for example
   the style_class property of the widget), it will be recreated,
@@ -11454,7 +11617,7 @@ will be reliably emitted before the widget is allocated or painted.</doc>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="649">a #StWidget</doc>
+                 line="670">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11462,7 +11625,7 @@ will be reliably emitted before the widget is allocated or painted.</doc>
       <method name="popup_menu" c:identifier="st_widget_popup_menu">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1928">Asks the widget to pop-up a context menu by emitting #StWidget::popup-menu.</doc>
+             line="1942">Asks the widget to pop-up a context menu by emitting #StWidget::popup-menu.</doc>
         <source-position filename="src/st/st-widget.h" line="121"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -11471,7 +11634,7 @@ will be reliably emitted before the widget is allocated or painted.</doc>
           <instance-parameter name="self" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1930">A #StWidget</doc>
+                 line="1944">A #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11480,7 +11643,7 @@ will be reliably emitted before the widget is allocated or painted.</doc>
               c:identifier="st_widget_remove_style_class_name">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1152">Removes @style_class from @actor's style class name, if it is
+             line="1177">Removes @style_class from @actor's style class name, if it is
 present.</doc>
         <source-position filename="src/st/st-widget.h" line="105"/>
         <return-value transfer-ownership="none">
@@ -11490,13 +11653,13 @@ present.</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1154">a #StWidget</doc>
+                 line="1179">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="style_class" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1155">a style class name string</doc>
+                 line="1180">a style class name string</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -11505,7 +11668,7 @@ present.</doc>
               c:identifier="st_widget_remove_style_pseudo_class">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1323">Removes @pseudo_class from @actor's pseudo class, if it is present.</doc>
+             line="1348">Removes @pseudo_class from @actor's pseudo class, if it is present.</doc>
         <source-position filename="src/st/st-widget.h" line="95"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -11514,13 +11677,13 @@ present.</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1325">a #StWidget</doc>
+                 line="1350">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="pseudo_class" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1326">a pseudo class string</doc>
+                 line="1351">a pseudo class string</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -11530,7 +11693,7 @@ present.</doc>
               glib:set-property="can-focus">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1878">Marks @widget as being able to receive keyboard focus via
+             line="1892">Marks @widget as being able to receive keyboard focus via
 keyboard navigation.</doc>
         <source-position filename="src/st/st-widget.h" line="125"/>
         <return-value transfer-ownership="none">
@@ -11540,13 +11703,13 @@ keyboard navigation.</doc>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1880">A #StWidget</doc>
+                 line="1894">A #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="can_focus" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1881">%TRUE if the widget can receive keyboard focus
+                 line="1895">%TRUE if the widget can receive keyboard focus
   via keyboard navigation</doc>
             <type name="gboolean" c:type="gboolean"/>
           </parameter>
@@ -11557,7 +11720,7 @@ keyboard navigation.</doc>
               glib:set-property="hover">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1795">Sets @widget's hover property and adds or removes "hover" from its
+             line="1823">Sets @widget's hover property and adds or removes "hover" from its
 pseudo class accordingly.
 
 If you have set #StWidget:track-hover, you should not need to call
@@ -11571,13 +11734,13 @@ state might be out of sync due to another actor's pointer grab.</doc>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1797">A #StWidget</doc>
+                 line="1825">A #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="hover" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1798">whether the pointer is hovering over the widget</doc>
+                 line="1826">whether the pointer is hovering over the widget</doc>
             <type name="gboolean" c:type="gboolean"/>
           </parameter>
         </parameters>
@@ -11587,7 +11750,7 @@ state might be out of sync due to another actor's pointer grab.</doc>
               glib:set-property="label-actor">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="2350">Sets @label as the #ClutterActor that identifies (labels)
+             line="2364">Sets @label as the #ClutterActor that identifies (labels)
 @widget. @label can be %NULL to indicate that @widget is not
 labelled any more</doc>
         <source-position filename="src/st/st-widget.h" line="134"/>
@@ -11598,13 +11761,13 @@ labelled any more</doc>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="2352">a #StWidget</doc>
+                 line="2366">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="label" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="2353">a #ClutterActor</doc>
+                 line="2367">a #ClutterActor</doc>
             <type name="Clutter.Actor" c:type="ClutterActor*"/>
           </parameter>
         </parameters>
@@ -11614,7 +11777,7 @@ labelled any more</doc>
               glib:set-property="style">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1350">Set the inline style string for this widget. The inline style string is an
+             line="1375">Set the inline style string for this widget. The inline style string is an
 optional ';'-separated list of CSS properties that override the style as
 determined from the stylesheets of the current theme.</doc>
         <source-position filename="src/st/st-widget.h" line="111"/>
@@ -11625,7 +11788,7 @@ determined from the stylesheets of the current theme.</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1352">a #StWidget</doc>
+                 line="1377">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="style"
@@ -11634,7 +11797,7 @@ determined from the stylesheets of the current theme.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1353">a inline style string, or %NULL</doc>
+                 line="1378">a inline style string, or %NULL</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -11644,7 +11807,7 @@ determined from the stylesheets of the current theme.</doc>
               glib:set-property="style-class">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1098">Set the style class name list. @style_class_list can either be
+             line="1123">Set the style class name list. @style_class_list can either be
 %NULL, for no classes, or a space-separated list of style class
 names. See also st_widget_add_style_class_name() and
 st_widget_remove_style_class_name().</doc>
@@ -11656,7 +11819,7 @@ st_widget_remove_style_class_name().</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1100">a #StWidget</doc>
+                 line="1125">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="style_class_list"
@@ -11665,7 +11828,7 @@ st_widget_remove_style_class_name().</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1101">a new style class list string</doc>
+                 line="1126">a new style class list string</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -11675,7 +11838,7 @@ st_widget_remove_style_class_name().</doc>
               glib:set-property="pseudo-class">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1267">Set the style pseudo class list. @pseudo_class_list can either be
+             line="1292">Set the style pseudo class list. @pseudo_class_list can either be
 %NULL, for no classes, or a space-separated list of pseudo class
 names. See also st_widget_add_style_pseudo_class() and
 st_widget_remove_style_pseudo_class().</doc>
@@ -11687,7 +11850,7 @@ st_widget_remove_style_pseudo_class().</doc>
           <instance-parameter name="actor" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1269">a #StWidget</doc>
+                 line="1294">a #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="pseudo_class_list"
@@ -11696,7 +11859,7 @@ st_widget_remove_style_pseudo_class().</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1270">a new pseudo class list string</doc>
+                 line="1295">a new pseudo class list string</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -11706,7 +11869,7 @@ st_widget_remove_style_pseudo_class().</doc>
               glib:set-property="track-hover">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1738">Enables hover tracking on the #StWidget.
+             line="1766">Enables hover tracking on the #StWidget.
 
 If hover tracking is enabled, and the widget is visible and
 reactive, then @widget's #StWidget:hover property will be updated
@@ -11726,13 +11889,13 @@ case.</doc>
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1740">A #StWidget</doc>
+                 line="1768">A #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
           <parameter name="track_hover" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1741">%TRUE if the widget should track the pointer hover state</doc>
+                 line="1769">%TRUE if the widget should track the pointer hover state</doc>
             <type name="gboolean" c:type="gboolean"/>
           </parameter>
         </parameters>
@@ -11751,7 +11914,7 @@ case.</doc>
       <method name="sync_hover" c:identifier="st_widget_sync_hover">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="1828">Sets @widget's hover state according to the current pointer
+             line="1856">Sets @widget's hover state according to the current pointer
 position. This can be used to ensure that it is correct after
 (or during) a pointer grab.</doc>
         <source-position filename="src/st/st-widget.h" line="119"/>
@@ -11762,7 +11925,7 @@ position. This can be used to ensure that it is correct after
           <instance-parameter name="widget" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="1830">A #StWidget</doc>
+                 line="1858">A #StWidget</doc>
             <type name="Widget" c:type="StWidget*"/>
           </instance-parameter>
         </parameters>
@@ -11775,7 +11938,7 @@ position. This can be used to ensure that it is correct after
                 default-value="FALSE">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="953">Whether or not the widget can be focused via keyboard navigation.</doc>
+             line="978">Whether or not the widget can be focused via keyboard navigation.</doc>
         <type name="gboolean" c:type="gboolean"/>
       </property>
       <property name="hover"
@@ -11786,7 +11949,7 @@ position. This can be used to ensure that it is correct after
                 default-value="FALSE">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="941">Whether or not the pointer is currently hovering over the widget. This is
+             line="966">Whether or not the pointer is currently hovering over the widget. This is
 only tracked automatically if #StWidget:track-hover is %TRUE, but you can
 adjust it manually in any case.</doc>
         <type name="gboolean" c:type="gboolean"/>
@@ -11798,7 +11961,7 @@ adjust it manually in any case.</doc>
                 getter="get_label_actor">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="963">An actor that labels this widget.</doc>
+             line="988">An actor that labels this widget.</doc>
         <type name="Clutter.Actor"/>
       </property>
       <property name="pseudo-class"
@@ -11808,7 +11971,7 @@ adjust it manually in any case.</doc>
                 getter="get_style_pseudo_class">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="895">The pseudo-class of the actor. Typical values include "hover", "active",
+             line="920">The pseudo-class of the actor. Typical values include "hover", "active",
 "focus".</doc>
         <type name="utf8" c:type="gchar*"/>
       </property>
@@ -11819,7 +11982,7 @@ adjust it manually in any case.</doc>
                 getter="get_style">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="916">Inline style information for the actor as a ';'-separated list of
+             line="941">Inline style information for the actor as a ';'-separated list of
 CSS properties.</doc>
         <type name="utf8" c:type="gchar*"/>
       </property>
@@ -11830,7 +11993,7 @@ CSS properties.</doc>
                 getter="get_style_class_name">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="906">The style-class of the actor for use in styling.</doc>
+             line="931">The style-class of the actor for use in styling.</doc>
         <type name="utf8" c:type="gchar*"/>
       </property>
       <property name="track-hover"
@@ -11841,7 +12004,7 @@ CSS properties.</doc>
                 default-value="FALSE">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="927">Determines whether the widget tracks pointer hover state. If
+             line="952">Determines whether the widget tracks pointer hover state. If
 %TRUE (and the widget is visible and reactive), the
 #StWidget:hover property and "hover" style pseudo class will be
 adjusted automatically as the pointer moves in and out of the
@@ -11854,7 +12017,7 @@ widget.</doc>
       <glib:signal name="popup-menu" when="last">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="990">Emitted when the user has requested a context menu (eg, via a keybinding)</doc>
+             line="1015">Emitted when the user has requested a context menu (eg, via a keybinding)</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
         </return-value>
@@ -11862,7 +12025,7 @@ widget.</doc>
       <glib:signal name="style-changed" when="last">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="975">Emitted when the style information that the widget derives from the
+             line="1000">Emitted when the style information that the widget derives from the
 theme changes</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -11924,7 +12087,7 @@ theme changes</doc>
             <parameter name="self" transfer-ownership="none">
               <doc xml:space="preserve"
                    filename="src/st/st-widget.c"
-                   line="1930">A #StWidget</doc>
+                   line="1944">A #StWidget</doc>
               <type name="Widget" c:type="StWidget*"/>
             </parameter>
           </parameters>
@@ -11967,7 +12130,7 @@ theme changes</doc>
           <return-value transfer-ownership="container">
             <doc xml:space="preserve"
                  filename="src/st/st-widget.c"
-                 line="2572">
+                 line="2586">
   @widget's focusable children</doc>
             <type name="GLib.List" c:type="GList*">
               <type name="Clutter.Actor"/>
@@ -11977,7 +12140,7 @@ theme changes</doc>
             <parameter name="widget" transfer-ownership="none">
               <doc xml:space="preserve"
                    filename="src/st/st-widget.c"
-                   line="2566">An #StWidget</doc>
+                   line="2580">An #StWidget</doc>
               <type name="Widget" c:type="StWidget*"/>
             </parameter>
           </parameters>
@@ -11987,21 +12150,21 @@ theme changes</doc>
     <function name="describe_actor" c:identifier="st_describe_actor">
       <doc xml:space="preserve"
            filename="src/st/st-widget.c"
-           line="2257">Creates a string describing @actor, for use in debugging. This
+           line="2271">Creates a string describing @actor, for use in debugging. This
 includes the class name and actor name (if any), plus if @actor
 is an #StWidget, its style class and pseudo class names.</doc>
       <source-position filename="src/st/st-widget.h" line="148"/>
       <return-value transfer-ownership="full">
         <doc xml:space="preserve"
              filename="src/st/st-widget.c"
-             line="2265">the debug name.</doc>
+             line="2279">the debug name.</doc>
         <type name="utf8" c:type="char*"/>
       </return-value>
       <parameters>
         <parameter name="actor" transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-widget.c"
-               line="2259">a #ClutterActor</doc>
+               line="2273">a #ClutterActor</doc>
           <type name="Clutter.Actor" c:type="ClutterActor*"/>
         </parameter>
       </parameters>
