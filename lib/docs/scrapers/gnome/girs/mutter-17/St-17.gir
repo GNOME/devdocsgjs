@@ -1328,12 +1328,12 @@ and transitions effects between states.</doc>
       <constructor name="new" c:identifier="st_button_new">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="435">Create a new button</doc>
+             line="444">Create a new button</doc>
         <source-position filename="src/st/st-button.h" line="42"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="440">a new #StButton</doc>
+               line="449">a new #StButton</doc>
           <type name="Widget" c:type="StWidget*"/>
         </return-value>
       </constructor>
@@ -1341,19 +1341,19 @@ and transitions effects between states.</doc>
                    c:identifier="st_button_new_with_label">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="448">Create a new #StButton with the specified label</doc>
+             line="457">Create a new #StButton with the specified label</doc>
         <source-position filename="src/st/st-button.h" line="43"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="454">a new #StButton</doc>
+               line="463">a new #StButton</doc>
           <type name="Widget" c:type="StWidget*"/>
         </return-value>
         <parameters>
           <parameter name="text" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="450">text to set the label to</doc>
+                 line="459">text to set the label to</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -1375,7 +1375,7 @@ and transitions effects between states.</doc>
       <method name="fake_release" c:identifier="st_button_fake_release">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="745">If this widget is holding a pointer grab, this function will
+             line="754">If this widget is holding a pointer grab, this function will
 will ungrab it, and reset the #StButton:pressed state.  The effect is
 similar to if the user had released the mouse button, but without
 emitting the #StButton::clicked signal.
@@ -1391,7 +1391,7 @@ time, breaking the grab.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="747">an #StButton</doc>
+                 line="756">an #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1401,13 +1401,13 @@ time, breaking the grab.</doc>
               glib:get-property="button-mask">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="594">Gets the mask of mouse buttons that @button emits the
+             line="603">Gets the mask of mouse buttons that @button emits the
 #StButton::clicked signal for.</doc>
         <source-position filename="src/st/st-button.h" line="78"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="601">the mask of mouse buttons that @button emits the
+               line="610">the mask of mouse buttons that @button emits the
 #StButton::clicked signal for.</doc>
           <type name="ButtonMask" c:type="StButtonMask"/>
         </return-value>
@@ -1415,7 +1415,7 @@ time, breaking the grab.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="596">a #StButton</doc>
+                 line="605">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1425,19 +1425,19 @@ time, breaking the grab.</doc>
               glib:get-property="checked">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="679">Get the #StButton:checked property of a #StButton that is in toggle mode.</doc>
+             line="688">Get the #StButton:checked property of a #StButton that is in toggle mode.</doc>
         <source-position filename="src/st/st-button.h" line="55"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="685">%TRUE if the button is checked, or %FALSE if not</doc>
+               line="694">%TRUE if the button is checked, or %FALSE if not</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="681">a #StButton</doc>
+                 line="690">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1447,20 +1447,20 @@ time, breaking the grab.</doc>
               glib:get-property="icon-name">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="531">Get the icon name of the button. If the button isn't showing an icon,
+             line="540">Get the icon name of the button. If the button isn't showing an icon,
 the return value will be %NULL.</doc>
         <source-position filename="src/st/st-button.h" line="47"/>
         <return-value transfer-ownership="none" nullable="1">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="538">the icon name of the button</doc>
+               line="547">the icon name of the button</doc>
           <type name="utf8" c:type="const char*"/>
         </return-value>
         <parameters>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="533">a #StButton</doc>
+                 line="542">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1470,20 +1470,20 @@ the return value will be %NULL.</doc>
               glib:get-property="label">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="462">Get the text displayed on the button. If the label is empty, an empty string
+             line="471">Get the text displayed on the button. If the label is empty, an empty string
 will be returned instead of %NULL.</doc>
         <source-position filename="src/st/st-button.h" line="44"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="469">the text for the button</doc>
+               line="478">the text for the button</doc>
           <type name="utf8" c:type="const gchar*"/>
         </return-value>
         <parameters>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="464">a #StButton</doc>
+                 line="473">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1493,19 +1493,19 @@ will be returned instead of %NULL.</doc>
               glib:get-property="pressed">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="725">Get the #StButton:pressed property of a #StButton</doc>
+             line="734">Get the #StButton:pressed property of a #StButton</doc>
         <source-position filename="src/st/st-button.h" line="56"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="731">%TRUE if the button is pressed, or %FALSE if not</doc>
+               line="740">%TRUE if the button is pressed, or %FALSE if not</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="727">a #StButton</doc>
+                 line="736">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1515,19 +1515,19 @@ will be returned instead of %NULL.</doc>
               glib:get-property="toggle-mode">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="637">Get the toggle mode status of the button.</doc>
+             line="646">Get the toggle mode status of the button.</doc>
         <source-position filename="src/st/st-button.h" line="52"/>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve"
                filename="src/st/st-button.c"
-               line="643">%TRUE if toggle mode is set, otherwise %FALSE</doc>
+               line="652">%TRUE if toggle mode is set, otherwise %FALSE</doc>
           <type name="gboolean" c:type="gboolean"/>
         </return-value>
         <parameters>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="639">a #StButton</doc>
+                 line="648">a #StButton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
         </parameters>
@@ -1537,7 +1537,7 @@ will be returned instead of %NULL.</doc>
               glib:set-property="button-mask">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="612">Sets which mouse buttons @button emits #StButton::clicked for.</doc>
+             line="621">Sets which mouse buttons @button emits #StButton::clicked for.</doc>
         <source-position filename="src/st/st-button.h" line="76"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -1546,13 +1546,13 @@ will be returned instead of %NULL.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="614">a #Stbutton</doc>
+                 line="623">a #Stbutton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
           <parameter name="mask" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="615">the mask of mouse buttons that @button responds to</doc>
+                 line="624">the mask of mouse buttons that @button responds to</doc>
             <type name="ButtonMask" c:type="StButtonMask"/>
           </parameter>
         </parameters>
@@ -1562,7 +1562,7 @@ will be returned instead of %NULL.</doc>
               glib:set-property="checked">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="695">Set the #StButton:checked property of the button. This is only really useful
+             line="704">Set the #StButton:checked property of the button. This is only really useful
 if the button has #StButton:toggle-mode property set to %TRUE.</doc>
         <source-position filename="src/st/st-button.h" line="53"/>
         <return-value transfer-ownership="none">
@@ -1572,13 +1572,13 @@ if the button has #StButton:toggle-mode property set to %TRUE.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="697">a #Stbutton</doc>
+                 line="706">a #Stbutton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
           <parameter name="checked" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="698">%TRUE or %FALSE</doc>
+                 line="707">%TRUE or %FALSE</doc>
             <type name="gboolean" c:type="gboolean"/>
           </parameter>
         </parameters>
@@ -1588,7 +1588,7 @@ if the button has #StButton:toggle-mode property set to %TRUE.</doc>
               glib:set-property="icon-name">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="553">Adds an `StIcon` with the given icon name as a child.
+             line="562">Adds an `StIcon` with the given icon name as a child.
 
 If @button already contains a child actor, that child will
 be removed and replaced with the icon.</doc>
@@ -1600,13 +1600,13 @@ be removed and replaced with the icon.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="555">a #Stbutton</doc>
+                 line="564">a #Stbutton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
           <parameter name="icon_name" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="556">an icon name</doc>
+                 line="565">an icon name</doc>
             <type name="utf8" c:type="const char*"/>
           </parameter>
         </parameters>
@@ -1616,7 +1616,7 @@ be removed and replaced with the icon.</doc>
               glib:set-property="label">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="479">Sets the text displayed on the button.</doc>
+             line="488">Sets the text displayed on the button.</doc>
         <source-position filename="src/st/st-button.h" line="45"/>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -1625,7 +1625,7 @@ be removed and replaced with the icon.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="481">a #Stbutton</doc>
+                 line="490">a #Stbutton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
           <parameter name="text"
@@ -1634,7 +1634,7 @@ be removed and replaced with the icon.</doc>
                      allow-none="1">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="482">text to set the label to</doc>
+                 line="491">text to set the label to</doc>
             <type name="utf8" c:type="const gchar*"/>
           </parameter>
         </parameters>
@@ -1644,7 +1644,7 @@ be removed and replaced with the icon.</doc>
               glib:set-property="toggle-mode">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="653">Enables or disables toggle mode for the button. In toggle mode, the checked
+             line="662">Enables or disables toggle mode for the button. In toggle mode, the checked
 state will be "toggled" when the user clicks the button.</doc>
         <source-position filename="src/st/st-button.h" line="50"/>
         <return-value transfer-ownership="none">
@@ -1654,13 +1654,13 @@ state will be "toggled" when the user clicks the button.</doc>
           <instance-parameter name="button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="655">a #Stbutton</doc>
+                 line="664">a #Stbutton</doc>
             <type name="Button" c:type="StButton*"/>
           </instance-parameter>
           <parameter name="toggle" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="656">%TRUE or %FALSE</doc>
+                 line="665">%TRUE or %FALSE</doc>
             <type name="gboolean" c:type="gboolean"/>
           </parameter>
         </parameters>
@@ -1673,7 +1673,7 @@ state will be "toggled" when the user clicks the button.</doc>
                 default-value="ST_BUTTON_ONE">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="348">Which buttons will trigger the #StButton::clicked signal.</doc>
+             line="357">Which buttons will trigger the #StButton::clicked signal.</doc>
         <type name="ButtonMask"/>
       </property>
       <property name="checked"
@@ -1684,7 +1684,7 @@ state will be "toggled" when the user clicks the button.</doc>
                 default-value="FALSE">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="368">If #StButton:toggle-mode is %TRUE, indicates if the #StButton is toggled
+             line="377">If #StButton:toggle-mode is %TRUE, indicates if the #StButton is toggled
 "on" or "off".
 
 When the value is %TRUE, the #StButton will have the `checked` CSS
@@ -1699,7 +1699,7 @@ pseudo-class set.</doc>
                 default-value="NULL">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="338">The icon name of the #StButton.</doc>
+             line="347">The icon name of the #StButton.</doc>
         <type name="utf8" c:type="gchar*"/>
       </property>
       <property name="label"
@@ -1710,7 +1710,7 @@ pseudo-class set.</doc>
                 default-value="NULL">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="328">The label of the #StButton.</doc>
+             line="337">The label of the #StButton.</doc>
         <type name="utf8" c:type="gchar*"/>
       </property>
       <property name="pressed"
@@ -1719,7 +1719,7 @@ pseudo-class set.</doc>
                 default-value="FALSE">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="382">In contrast to #StButton:checked, this property indicates whether the
+             line="391">In contrast to #StButton:checked, this property indicates whether the
 #StButton is being actively pressed, rather than just in the "on" state.</doc>
         <type name="gboolean" c:type="gboolean"/>
       </property>
@@ -1731,7 +1731,7 @@ pseudo-class set.</doc>
                 default-value="FALSE">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="358">Whether the #StButton is operating in toggle mode (on/off).</doc>
+             line="367">Whether the #StButton is operating in toggle mode (on/off).</doc>
         <type name="gboolean" c:type="gboolean"/>
       </property>
       <field name="parent_instance">
@@ -1740,7 +1740,7 @@ pseudo-class set.</doc>
       <glib:signal name="clicked" when="last">
         <doc xml:space="preserve"
              filename="src/st/st-button.c"
-             line="396">Emitted when the user activates the button, either with a mouse press and
+             line="405">Emitted when the user activates the button, either with a mouse press and
 release or with the keyboard.</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -1749,7 +1749,7 @@ release or with the keyboard.</doc>
           <parameter name="clicked_button" transfer-ownership="none">
             <doc xml:space="preserve"
                  filename="src/st/st-button.c"
-                 line="399">the mouse button that was used</doc>
+                 line="408">the mouse button that was used</doc>
             <type name="gint" c:type="gint"/>
           </parameter>
         </parameters>
